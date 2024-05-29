@@ -50,11 +50,10 @@ const FirebaseResult = ({Search,Data}) => {
               {
                 setFound(true)
                 setFoundguest(guest[i])
-                //console.log("guest log " ,guest[i])
+                console.log("guest log " ,guest[i])
                 
               }
           }
-          setSeacrh(false)
       }
     
   }
@@ -96,9 +95,9 @@ const FirebaseResult = ({Search,Data}) => {
     }
   else if (authorized)
     {
-      console.log("found success " ,Foundguest)
+      //console.log("found success " ,Foundguest)
       return (
-    <FirebaseHandler Foundguest={Foundguest}></FirebaseHandler>
+    <FirebaseHandler Guest={Foundguest}></FirebaseHandler>
   );
     }
   

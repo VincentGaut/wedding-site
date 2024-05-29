@@ -39,6 +39,7 @@ const Presence = () => {
         prenom: '',
         nom: ''
       });
+      
     }
   
     return (

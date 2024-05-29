@@ -7,17 +7,17 @@ import './../styles/FirebaseHandler.css';
 
 function FirebaseHandler ({Guest})  { 
     const [foundGuest,setFoundguest] = useState(Guest)
-    console.log("foundguest" + Guest)
+    //console.log("foundguest" + Guest)
 
     useEffect ( () => {
         setFoundguest(Guest)
-        //console.log("foundguest" + Guest)
+        //console.log(Guest)
       },[Guest])
     
     
     if (foundGuest!=undefined)
         {
-            console.log("foundguest" + foundGuest)
+            //console.log("foundguest" + foundGuest)
             return(
             <div>
                 <Checkbox Guest = {foundGuest}></Checkbox>

@@ -6,8 +6,14 @@ import GuestInfo from './GuestInfo';
 const Checkbox = ({Guest}) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
-  const [name,setName] = useState(Guest.prenom+" "+Guest.nom);
   const [guest,setGuest] = useState(Guest);
+  const [name,setName] = useState(Guest.prenom+" "+Guest.nom);
+  
+
+  useEffect ( () => {
+    setGuest(Guest)
+    setName(Guest.prenom+" "+Guest.nom)
+  },[Guest])
 
   const handleCheckboxChange = (event) => {
     setIsChecked(event.target.checked);
