@@ -5,7 +5,7 @@ import Checkbox from './CheckBox';
 import './../styles/FirebaseHandler.css';
 
 
-function FirebaseHandler ({Guest})  { 
+const FirebaseHandler  = ({Guest})  => { 
     const [foundGuest,setFoundguest] = useState(Guest)
     //console.log("foundguest" + Guest)
 

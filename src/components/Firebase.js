@@ -13,10 +13,12 @@ const FirebaseResult = ({Search,Data}) => {
 
   //console.log(formData)
   const[guest,setGuest] = useState([]);
+  const[guestId,setGuestId] = useState([]);
   const [loading,setloading] = useState(false);
   const [authorized,setAuthorized] = useState(false);
   const [found,setFound] = useState(false);
   const[Foundguest,setFoundguest] = useState({});
+  const[FoundguestId,setFoundguestId] = useState({});
 
   const ref = firebase.firestore().collection("guest");
 
@@ -32,8 +34,11 @@ const FirebaseResult = ({Search,Data}) => {
       setGuest(items);
       setloading(false)*/
       ref.get().then((item) => {
-        const items = item.docs.map((doc) => doc.data());
+        const items = item.docs.map((doc) => doc.data())
+        //console.log(item.docs.map((doc) => doc.id));
+        const itemsId = item.docs.map((doc) => doc.id);
         setGuest(items);
+        setGuestId(itemsId)
         setloading(false);
       });
       
@@ -41,17 +46,22 @@ const FirebaseResult = ({Search,Data}) => {
 
   function checkNames (){
     //setAuthorized(false)
-    if (guest.length>0)
+    if (guest.length>0 && Data.prenom != undefined && Data.nom !=undefined)
       {
         for (let i=0;i<guest.length;i++)
           {
-            if ((((guest[i].prenom).localeCompare(Data.prenom, 'en', { sensitivity: 'base' }) )==0)&&
-            (((guest[i].nom).localeCompare(Data.nom, 'en', { sensitivity: 'base' }) )==0))
+            if (Object.keys(guest[i]).length != 0)
+              {
+                if ((((guest[i].prenom).localeCompare(Data.prenom, 'en', { sensitivity: 'base' }) )==0)&&
+                (((guest[i].nom).localeCompare(Data.nom, 'en', { sensitivity: 'base' }) )==0))
               {
                 setFound(true)
                 setFoundguest(guest[i])
-                console.log("guest log " ,guest[i])
+                setFoundguestId(guestId[i])
+                sessionStorage.setItem('id', guestId[i]);
+                //console.log("guest log " ,guest[i])
                 
+              }
               }
           }
       }
@@ -70,8 +80,6 @@ const FirebaseResult = ({Search,Data}) => {
         getGuest();
         
       }
-      console.log(search)
-      console.log(formData)
     
   },[search,formData]);
 
@@ -84,6 +92,8 @@ const FirebaseResult = ({Search,Data}) => {
       {
         //console.log("found success " ,Foundguest)
         setAuthorized(true)
+        sessionStorage.setItem('prenom', Foundguest.prenom);
+        sessionStorage.setItem('nom', Foundguest.nom);
       }
   },[Foundguest])
 

@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import CommentBox from './Commentaires';
+import Commentaires from './Commentaires';
 import './../styles/Regime.css';
 
 const Regime = ({Guest}) => {
     const [guest,setGuest] = useState(Guest);
 
-    const [isCheckedAucun, setIsCheckedAucun] = useState(initStateGuest(Guest,0));
-    const [isCheckedVegetarien, setIsCheckedVegetarien] = useState(initStateGuest(Guest,1));
-    const [isCheckedVegetalien, setIsCheckedVegetalien] = useState(initStateGuest(Guest,2));
-    const [isCheckedAllergie, setIsCheckedAllergie] = useState(initStateGuest(Guest,3));
-    const [isCheckedAutre, setIsCheckedAutre] = useState(initStateGuest(Guest,4));
+    const [isCheckedAucun, setIsCheckedAucun] = useState(() =>initStateGuest(Guest,0));
+    const [isCheckedVegetarien, setIsCheckedVegetarien] = useState(() =>initStateGuest(Guest,1));
+    const [isCheckedVegetalien, setIsCheckedVegetalien] = useState(() =>initStateGuest(Guest,2));
+    const [isCheckedAllergie, setIsCheckedAllergie] = useState(() =>initStateGuest(Guest,3));
+    const [isCheckedAutre, setIsCheckedAutre] = useState(() =>initStateGuest(Guest,4));
     
 
     const [isButtonClicked, setIsButtonClicked] = useState(false);
 
     const handleCheckboxAucun = (event) => {
         setIsCheckedAucun(event.target.checked);
+        sessionStorage.setItem('regime', "aucun");
         if (!event.target.checked) {
           setIsButtonClicked(false); // Réinitialiser l'état du bouton si la case est décochée
         }
@@ -29,6 +30,7 @@ const Regime = ({Guest}) => {
 
       const handleCheckboxVegetarien = (event) => {
         setIsCheckedVegetarien(event.target.checked);
+        sessionStorage.setItem('regime', "vegetarien");
         if (!event.target.checked) {
           setIsButtonClicked(false); // Réinitialiser l'état du bouton si la case est décochée
         }
@@ -42,6 +44,7 @@ const Regime = ({Guest}) => {
 
       const handleCheckboxVegetalien = (event) => {
         setIsCheckedVegetalien(event.target.checked);
+        sessionStorage.setItem('regime', "vegetalien");
         if (!event.target.checked) {
           setIsButtonClicked(false); // Réinitialiser l'état du bouton si la case est décochée
         }
@@ -55,6 +58,7 @@ const Regime = ({Guest}) => {
 
       const handleCheckboxAllergie = (event) => {
         setIsCheckedAllergie(event.target.checked);
+        sessionStorage.setItem('regime', "allergie");
         if (!event.target.checked) {
           setIsButtonClicked(false); // Réinitialiser l'état du bouton si la case est décochée
         }
@@ -68,6 +72,7 @@ const Regime = ({Guest}) => {
 
       const handleCheckboxAutre = (event) => {
         setIsCheckedAutre(event.target.checked);
+        sessionStorage.setItem('regime', "autre");
         if (!event.target.checked) {
           setIsButtonClicked(false); // Réinitialiser l'état du bouton si la case est décochée
         }
@@ -93,6 +98,7 @@ const Regime = ({Guest}) => {
         case 0:
             if (guestInfo.regime == "aucun" || guestInfo.regime == "")
             {
+              sessionStorage.setItem('regime', "aucun");
                 return true;
             }
             else
@@ -105,6 +111,7 @@ const Regime = ({Guest}) => {
         case 1:
             if (guestInfo.regime == "vegetarien")
             {
+              sessionStorage.setItem('regime', "vegetarien");
                 return true;
             }
             else
@@ -115,6 +122,7 @@ const Regime = ({Guest}) => {
         case 2:
             if (guestInfo.regime == "vegetalien")
             {
+              sessionStorage.setItem('regime', "vegetalien");
                 return true;
             }
             else
@@ -125,6 +133,7 @@ const Regime = ({Guest}) => {
         case 3:
             if (guestInfo.regime == "allergie")
             {
+              sessionStorage.setItem('regime', "allergie");
                 return true;
             }
             else
@@ -135,6 +144,7 @@ const Regime = ({Guest}) => {
         case 4:
             if (guestInfo.regime == "autre")
             {
+              sessionStorage.setItem('regime', "autre");
                 return true;
             }
             else
@@ -224,7 +234,7 @@ const Regime = ({Guest}) => {
         </div>
       
     </div>
-    <CommentBox Guest={guest}></CommentBox>
+    <Commentaires Guest={guest}></Commentaires>
 </div>
 );
   

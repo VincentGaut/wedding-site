@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Footer from './Footer';
+import MyMapComponent from './Lieux';
 import './../styles/Blog.css';
 
 const Blog = () => (
@@ -16,7 +17,9 @@ const Blog = () => (
         <p className='blog-pres'>Attention ! Garde un oeil sur cette section, c'est ici que tu pourras découvrir les nouvelles 
         fraîches autour de l'organisation de notre mariage :)</p>
     </div>
-    <Footer></Footer>
+
+    <MyMapComponent></MyMapComponent>
+    
   </section>
 );
 

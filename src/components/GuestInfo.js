@@ -8,6 +8,7 @@ import Regime from './Regime';
 const GuestInfo = ({Guest}) => {
     //console.log(Guest)
     const [guest,setGuest] = useState(Guest);
+    const [dispoBox, setdispoBox] = useState ("")
     useEffect ( () => {
         setGuest(Guest)
         //console.log(Guest)

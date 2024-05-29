@@ -25,10 +25,10 @@ const Presence = () => {
     const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    //console.log('Form submitted:', formData);
     setSubmittedData(formData);
     setSeacrh(true);
-    clearSubmit()
+    //clearSubmit()
     };
 
 

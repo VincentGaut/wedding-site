@@ -4,7 +4,7 @@ import './../styles/Menu-deroulant.css';
 const Menu = ({Guest}) => {
     const [guest,setGuest] = useState(Guest);
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedItem, setSelectedItem] = useState(initSelectedItem(Guest));
+    const [selectedItem, setSelectedItem] = useState(() => initSelectedItem(Guest));
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -12,6 +12,7 @@ const Menu = ({Guest}) => {
 
     const handleItemClick = (item) => {
         setSelectedItem(item.label);
+        sessionStorage.setItem('menu', item.label);
         setIsOpen(false);
     };
 
@@ -25,10 +26,12 @@ const Menu = ({Guest}) => {
     {
         if (guestdata.menu == "")
             {
+                sessionStorage.setItem('menu', "");
                 return 'Select an option'
             }
         else
         {
+            sessionStorage.setItem('menu', guestdata.menu);
             return guestdata.menu
         }
 

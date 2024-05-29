@@ -7,10 +7,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Blog from './components/Blog'
 import Home from './components/Home';
-import Contact from './components/Firebase';
+import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import Schedule from './components/Schedule';
 import Presence from './components/Presence';
+
 
 
 function App() {
