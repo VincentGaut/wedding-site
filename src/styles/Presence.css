@@ -1,0 +1,82 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  form > div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  
+.button-form {
+    overflow:hidden;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition:all .2s ease-in-out;
+    
+}
+
+.button-form::before{
+content:" ";
+display:block;
+width:200px;
+height:80px;
+background:rgba(255, 255, 255, .4);
+position:absolute;
+top:-10px;
+left:-200px;
+transform:rotate(-45deg);
+transition:all .2s ease-in-out;
+}
+
+.button-form:hover::before{
+margin-left:300%;
+}
+
+.button-form:hover {
+border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.button-form-wrapper{
+    display: block;
+}
+
+.information-form{
+    display: flex;
+    margin: 2%;
+}
+.prenom-form{
+    box-sizing: border-box;
+    display: inline-block;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    line-height: 1.6;
+}
+.nom-form{
+    box-sizing: border-box;
+    display: inline-block;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    line-height: 1.6;
+}

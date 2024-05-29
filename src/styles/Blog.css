@@ -1,0 +1,34 @@
+
+#Blog{
+    background-color: #ffdfc6;
+}
+
+.image-wrapper {
+    height: 200px;
+    width: 25%;
+    padding-top: 20px;
+}
+.image{
+    background-image: url('./../components/img/invitation_rose_rouge.png');
+    background-size: contain; /* Assure que l'image couvre toute la div */
+    background-position: left; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 100%; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    position: relative; /* Nécessaire pour positionner le contenu par-dessus */
+
+}
+
+.blog-text{
+    text-align: center; /* Centre le texte */
+    font-family: Amatic;
+    line-height: 1.2;
+    color: #000;
+}
+
+.blog-title{
+    font-weight: 400;
+    font-size: 54px;
+    font-family: Amatic;
+    line-height: 1.2;
+}

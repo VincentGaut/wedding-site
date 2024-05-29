@@ -1,0 +1,36 @@
+.comment-box {
+    width: 50%;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 1em;
+  }
+  
+  button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .comment-list {
+    margin-top: 2em;
+  }
+  
+  .comment {
+    border-top: 1px solid #ccc;
+    padding: 0.5em 0;
+  }

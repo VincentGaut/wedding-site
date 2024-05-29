@@ -1,0 +1,29 @@
+#rsvp {
+    padding: 20px;
+    background: #f1f1f1;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #555;
+  }
+  

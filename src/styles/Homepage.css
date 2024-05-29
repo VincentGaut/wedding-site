@@ -1,0 +1,91 @@
+
+.header_pres{
+    height: 900px;
+    width: 100%;
+}
+.presentation{
+
+    background-image: url('./../components/img/valse_contraste.JPG');
+    background-size: cover; /* Assure que l'image couvre toute la div */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 100%; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    position: relative; /* Nécessaire pour positionner le contenu par-dessus */
+}
+
+.header_title{
+    position: absolute; /* Permet de positionner le contenu par-dessus l'image */
+    top: 50%; /* Centre verticalement le contenu */
+    left: 50%; /* Centre horizontalement le contenu */
+    transform: translate(-50%, -50%); /* Ajuste le positionnement pour être exactement au centre */
+    color: white; /* Couleur du texte pour qu'il soit visible sur l'image */
+    text-align: center; /* Centre le texte */
+    padding: 20px; /* Ajoute une marge intérieure au contenu */
+    font-weight: 400;
+    font-size: 90.6px;
+    font-family: Amatic;
+    line-height: 1.2;
+}
+
+.homepage{
+    height: 600px;
+    width: 100%;
+    background-color: #ffdfc6;
+}
+
+.rose-wrapper{
+    height: 200px;
+    width: 25%;
+    padding-top: 20px;
+    
+}
+.rose{
+    background-image: url('./../components/img/invitation_rose_rouge.png');
+    background-size: contain; /* Assure que l'image couvre toute la div */
+    background-position: left; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 100%; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    position: relative; /* Nécessaire pour positionner le contenu par-dessus */
+
+}
+
+.text-bienvenue{
+    text-align: center; /* Centre le texte */
+    color: #fff;
+    font-family: "Josefin Sans";
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.text-date{
+    text-align: center; /* Centre le texte */
+    color: #fff;
+    font-size: 24px;
+    font-family: Amatic;
+    line-height: 1.2;
+}
+
+.text-lieu{
+    text-align: center; /* Centre le texte */
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.fleur-wrapper{
+    height: 200px;
+    width: 100%;
+}
+
+.fleur{
+    background-image: url('./../components/img/fleur.png');
+    background-size: contain; /* Assure que l'image couvre toute la div */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 100%; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    position: relative; /* Nécessaire pour positionner le contenu par-dessus */
+
+}
