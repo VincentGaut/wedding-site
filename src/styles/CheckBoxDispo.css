@@ -65,7 +65,7 @@ margin: 2%;
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #9d3c3c;
     color: white;
     border: none;
     border-radius: 5px;
@@ -73,7 +73,7 @@ margin: 2%;
   }
   
   .round-checkbox-button:hover {
-    background-color: #0056b3;
+    background-color: #753535;
   }
 
   .box-dispo{

@@ -149,7 +149,7 @@ const CheckBoxDispo = ({Guest}) => {
 
                 </div>
                 <div className='menu-wrapper'>
-                    <h3>Choisir Menu : </h3>
+                    <h3>Type de Menu : </h3>
                     <Menu Guest={guest}></Menu>
                 </div>
             </div>

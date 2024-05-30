@@ -19,7 +19,7 @@
     background: #f1f1f1;
     padding: 2%;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
   
   .round-checkbox-input {
@@ -63,7 +63,7 @@
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #dcbfaf;
     color: white;
     border: none;
     border-radius: 5px;

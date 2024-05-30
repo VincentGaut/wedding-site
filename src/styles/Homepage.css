@@ -37,7 +37,7 @@
 .homepage{
     height: 100vh;
     width: 100%;
-    background-color: #ffdfc6;
+    background-color: #fff;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -78,7 +78,7 @@
 
 .text-bienvenue{
     text-align: center; /* Centre le texte */
-    color: #fff;
+    color: #000;
     font-family: "Josefin Sans";
     font-size: 24px;
     line-height: 30px;
@@ -86,7 +86,7 @@
 
 .text-date{
     text-align: center; /* Centre le texte */
-    color: #fff;
+    color: #000;
     font-size: 24px;
     font-family: Amatic;
     line-height: 1.2;
@@ -123,7 +123,7 @@
 
 .map-wrapper{
     align-self: center; /* Aligne l'élément à gauche sur la ligne */
-    background-color: #ffdfc6;
+    background-color: #fff;
     justify-content: center;
     display: flex;
     margin: 10px;

@@ -17,10 +17,10 @@ const GuestInfo = ({Guest}) => {
     return (
 
     <div>   
-        <div className="rectangle">
+        <div className="rectangle-guest-info">
             <div className='name-box'>
-                <p>Nom: {guest.nom}</p>
-                <p>Prénom: {guest.prenom}</p>
+                <p>Nom: <b>{guest.nom}</b></p>
+                <p>Prénom: <b>{guest.prenom}</b></p>
             </div>
 
             <div className='dispo-box'>

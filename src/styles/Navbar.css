@@ -3,7 +3,7 @@
   
   /* Navbar container */
   .navbar-div {
-    background-color: #E9E3E5;
+    background-color: #9d3c3c;
     margin: 0;
     align-items: center;
     padding: 0;
@@ -25,6 +25,7 @@
     align-items: center;
     height: 48px;
     justify-content: center;
+    color: #fff;
 
   }
   .initiales-wrapper{
@@ -35,20 +36,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #E9E3E5;
     padding: 1rem;
   }
   
   .navbar-logo {
-    color: #000;
+    color: #fff;
     font-size: 1.5rem;
     text-decoration: none;
     background-image: url('./../components/img/rings.png');
     background-size: contain; /* Assure que l'image couvre toute la div */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    width: 5vw; /* La div enfant (background-image) occupe toute la largeur de son parent */
-    height: 5vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    width: 10vw; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 10vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
     
   }
   
@@ -64,7 +64,7 @@
   }
   
   .navbar-links a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s;
@@ -72,7 +72,7 @@
   }
   
   .navbar-links a:hover {
-    background-color: #575757;
+    background-color: #c2b3b3;
     border-radius: 4px;
   }
   
