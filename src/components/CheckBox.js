@@ -31,16 +31,16 @@ const Checkbox = ({Guest}) => {
         return (
             <div>
                 <div className="round-checkbox-container">
-                <label className="round-checkbox-label">
-                    <input
-                    type="checkbox"
-                    checked={isChecked}
-                    onChange={handleCheckboxChange}
-                    className="round-checkbox-input"
-                    />
-                    <span className="round-checkbox-custom"></span>
-                    {name}
-                </label>
+                  <label className="round-checkbox-label-init">
+                      <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={handleCheckboxChange}
+                      className="round-checkbox-input"
+                      />
+                      <span className="round-checkbox-custom"></span>
+                      {name}
+                  </label>
                 {isChecked && <button className="round-checkbox-button"
                 onClick={handleButtonClick}>Continuer</button>}
                 </div>

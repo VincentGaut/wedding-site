@@ -5,6 +5,9 @@
     width: 300px;
     margin: 20px auto;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #dcf5ff;
 }
 
 .regime-végétarien{
@@ -13,6 +16,9 @@
     width: 300px;
     margin: 20px auto;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #dcf5ff;
 }
 
 .regime-végétalien{
@@ -21,6 +27,9 @@
     width: 300px;
     margin: 20px auto;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #dcf5ff;
 }
 
 .regime-alergie{
@@ -29,6 +38,9 @@
     width: 300px;
     margin: 20px auto;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #dcf5ff;
 }
 
 .regime-autre{
@@ -37,4 +49,7 @@
     width: 300px;
     margin: 20px auto;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #dcf5ff;
 }

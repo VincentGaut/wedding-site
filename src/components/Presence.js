@@ -43,7 +43,7 @@ const Presence = () => {
     }
   
     return (
-      <div>
+      <div className='presence-wrapper'>
         <section id='presence'>
         <form onSubmit={handleSubmit}>
         <div className='information-form'>

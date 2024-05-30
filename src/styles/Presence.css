@@ -98,3 +98,9 @@ border: 1px solid rgba(255, 255, 255, 1);
   height: 30vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
   
 }
+
+.presence-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
