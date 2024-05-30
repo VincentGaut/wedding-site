@@ -1,5 +1,6 @@
 import firebase from "firebase/compat/app"
 import 'firebase/compat/firestore';
+import { getAuth } from 'firebase/auth';
 
 
 const firebaseConfig = {
@@ -12,10 +13,13 @@ const firebaseConfig = {
     measurementId: process.env.REACT_APP_FIREBASE_MEASURMENT_ID
   };
   
+let app;
   if (firebase.apps.length === 0) {
-  firebase.initializeApp(firebaseConfig);
+    app= firebase.initializeApp(firebaseConfig);
   }
+  
+export const auth = getAuth(app);
 
-export default firebase
+export default firebase;
 
 

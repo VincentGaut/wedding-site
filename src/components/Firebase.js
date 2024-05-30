@@ -33,14 +33,22 @@ const FirebaseResult = ({Search,Data}) => {
       });
       setGuest(items);
       setloading(false)*/
-      ref.get().then((item) => {
-        const items = item.docs.map((doc) => doc.data())
-        //console.log(item.docs.map((doc) => doc.id));
-        const itemsId = item.docs.map((doc) => doc.id);
-        setGuest(items);
-        setGuestId(itemsId)
-        setloading(false);
-      });
+      try {
+        ref.get()
+        .then((item) => {
+          const items = item.docs.map((doc) => doc.data())
+          //console.log(item.docs.map((doc) => doc.id));
+          const itemsId = item.docs.map((doc) => doc.id);
+          setGuest(items);
+          setGuestId(itemsId)
+          setloading(false);
+        })
+        .catch((error) => { console.log(error); })
+      }
+      catch {
+        console.log("error login firebase")
+      }
+      
       
   }
 
