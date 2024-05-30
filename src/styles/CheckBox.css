@@ -57,6 +57,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    align-self: center; /* Centre l'élément au milieu sur la ligne */
   }
   
   .round-checkbox-button:hover {

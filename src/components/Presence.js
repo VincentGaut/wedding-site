@@ -43,7 +43,8 @@ const Presence = () => {
     }
   
     return (
-        <div>
+      <div>
+        <section id='presence'>
         <form onSubmit={handleSubmit}>
         <div className='information-form'>
             <div className='prenom-form'>
@@ -75,7 +76,12 @@ const Presence = () => {
       <FirebaseResult Search = {search}
                       Data = {submittedData}
                       ></FirebaseResult>
+      </section>
+
+      <div className='presence-deco'>
+                          
       </div>
+    </div>
     );
   };
 

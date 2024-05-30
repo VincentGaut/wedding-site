@@ -10,6 +10,7 @@ const Gallery = () => (
       <img src="image2.jpg" alt="Gallery 2" />
       <img src="image3.jpg" alt="Gallery 3" />
     </div>
+    <h1> Pas encore disponible ! Wait and see</h1>
   </section>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Footer from './Footer';
-import MyMapComponent from './Lieux';
+import MapComponent from './Lieux';
 import './../styles/Blog.css';
 
 const Blog = () => (
@@ -18,7 +18,7 @@ const Blog = () => (
         fraîches autour de l'organisation de notre mariage :)</p>
     </div>
 
-    <MyMapComponent></MyMapComponent>
+    <MapComponent></MapComponent>
     
   </section>
 );

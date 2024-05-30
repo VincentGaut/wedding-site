@@ -19,7 +19,7 @@ const FirebaseHandler  = ({Guest})  => {
         {
             //console.log("foundguest" + foundGuest)
             return(
-            <div>
+            <div className='result-firebase-success'>
                 <Checkbox Guest = {foundGuest}></Checkbox>
             </div>
               );

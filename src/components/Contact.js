@@ -21,8 +21,9 @@ const Contact = () => {
       const handleSubmit = (e) => {
         e.preventDefault();
         
-        emailjs.sendForm('service_ya0lytw', "template_r43wxss", e.target,
-        'KLJjF-GwwxrCwghFo')
+        emailjs.sendForm(process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+            process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID, e.target,
+            process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY)
           .then((result) => {
               console.log(result.text);
           }, (error) => {
@@ -33,15 +34,23 @@ const Contact = () => {
       };
     
       return (
-        <form onSubmit={handleSubmit}>
-          <label>Name</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-          <label>Email</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-          <label>Message</label>
-          <textarea name="message" value={formData.message} onChange={handleChange} required />
-          <button type="submit">Send</button>
-        </form>
+        <div>
+            <section id='contact'>
+                <form onSubmit={handleSubmit}>
+                    <label>Name</label>
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+                    <label>Email</label>
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+                    <label>Message</label>
+                    <textarea name="message" value={formData.message} onChange={handleChange} required />
+                    <button type="submit">Send</button>
+                </form>
+                
+            </section>
+            <div className='contact-deco'>
+                    
+            </div>
+        </div>
       );
 
 }

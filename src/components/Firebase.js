@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import firebase from './config';
 import FirebaseHandler from './FirebaseHandler';
 
-import './../styles/RSVP.css';
+import './../styles/Firebase.css';
 
 
 
@@ -100,13 +100,16 @@ const FirebaseResult = ({Search,Data}) => {
   if (loading)
     {
       return (
-        <h1 > Loading ... </h1>
+        <div className='loading-message'>
+          <h1 > Loading ... </h1>
+        </div>
       );
     }
   else if (authorized)
     {
       //console.log("found success " ,Foundguest)
       return (
+
     <FirebaseHandler Guest={Foundguest}></FirebaseHandler>
   );
     }

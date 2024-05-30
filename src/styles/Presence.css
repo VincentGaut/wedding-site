@@ -1,8 +1,14 @@
+#presence
+{
+  padding: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
     width: 300px;
     margin: 0 auto;
+    padding: 20px;
   }
   
   form > div {
@@ -68,6 +74,7 @@ border: 1px solid rgba(255, 255, 255, 1);
     font-family: "Josefin Sans";
     font-weight: 400;
     line-height: 1.6;
+    margin: 5px;
 }
 .nom-form{
     box-sizing: border-box;
@@ -79,4 +86,15 @@ border: 1px solid rgba(255, 255, 255, 1);
     font-family: "Josefin Sans";
     font-weight: 400;
     line-height: 1.6;
+    margin: 5px;
+}
+
+.presence-deco {
+  background-image: url('./../components/img/rose.jpg');
+  background-size: cover; /* Assure que l'image couvre toute la div */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
+  height: 30vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+  
 }

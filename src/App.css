@@ -2,6 +2,15 @@
   font-family: Arial, sans-serif;
   text-align: center;
   color: #333;
+  min-height: 800px;
+  
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Pour empiler les éléments verticalement */
+  background-color: #ffdfc6;
 }
 
 main {

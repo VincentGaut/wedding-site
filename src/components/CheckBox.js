@@ -41,7 +41,6 @@ const Checkbox = ({Guest}) => {
                     <span className="round-checkbox-custom"></span>
                     {name}
                 </label>
-                <p>{isChecked ? "La case est cochée" : "La case n'est pas cochée"}</p>
                 {isChecked && <button className="round-checkbox-button"
                 onClick={handleButtonClick}>Continuer</button>}
                 </div>

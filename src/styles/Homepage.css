@@ -1,7 +1,13 @@
 
-.header_pres{
-    height: 900px;
+.homepage-wrapper{
+    display: flex;
+    flex-direction: column; /* Pour empiler les éléments verticalement */
+
     width: 100%;
+}
+.header_pres{
+    width: 100%;
+
 }
 .presentation{
 
@@ -10,7 +16,7 @@
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
-    height: 100%; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    height: 100vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
     position: relative; /* Nécessaire pour positionner le contenu par-dessus */
 }
 
@@ -29,16 +35,28 @@
 }
 
 .homepage{
-    height: 600px;
+    height: 100vh;
     width: 100%;
     background-color: #ffdfc6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .rose-wrapper{
-    height: 200px;
-    width: 25%;
-    padding-top: 20px;
-    
+    height: 45vh;
+    width: 45vh;
+    padding-top: 20px;   
+    align-self: flex-start; /* Aligne l'élément à gauche sur la ligne */
+}
+
+.rose-wrapper2{
+    height: 45vh;
+    width: 45vh;
+    bottom: 0; /* Place l'ancre en bas */
+    transform: rotate(180deg);
+    position: relative;
+    align-self: flex-end; /* Aligne l'élément à gauche sur la ligne */
 }
 .rose{
     background-image: url('./../components/img/invitation_rose_rouge.png');
@@ -48,6 +66,13 @@
     width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
     height: 100%; /* La div enfant (background-image) occupe toute la hauteur de son parent */
     position: relative; /* Nécessaire pour positionner le contenu par-dessus */
+
+}
+.wrapper-text{
+    position: relative;
+    height: 100vh;
+    align-self: center; /* Aligne l'élément à gauche sur la ligne */
+    width: 100%;
 
 }
 
@@ -79,6 +104,12 @@
     width: 100%;
 }
 
+.fleur-wrapper1{
+    height: 200px;
+    width: 100%;
+    transform: rotate(180deg);
+}
+
 .fleur{
     background-image: url('./../components/img/fleur.png');
     background-size: contain; /* Assure que l'image couvre toute la div */
@@ -89,3 +120,21 @@
     position: relative; /* Nécessaire pour positionner le contenu par-dessus */
 
 }
+
+.map-wrapper{
+    align-self: center; /* Aligne l'élément à gauche sur la ligne */
+    background-color: #ffdfc6;
+    justify-content: center;
+    display: flex;
+    margin: 10px;
+}
+
+.homepage-deco {
+    background-image: url('./../components/img/rose.jpg');
+    background-size: cover; /* Assure que l'image couvre toute la div */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 30vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    
+  }

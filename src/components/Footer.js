@@ -3,7 +3,13 @@ import './../styles/Footer.css';
 
 const Footer = () => (
   <footer>
-    <p>&copy; 2024 Our Wedding. All rights reserved.</p>
+    <div className='footer-text'>
+      <p > EMELINE FIORE & VINCENT GAUTIER</p>
+    </div>
+    <div className='footer-text2'>
+      <p > Welcome to our wedding ! </p>
+    </div>
+    
   </footer>
 );
 

@@ -1,3 +1,8 @@
+#contact {
+    padding: 20px;
+    
+  }
+
 /* Style du formulaire */
 form {
     max-width: 600px;
@@ -79,4 +84,14 @@ form {
       padding: 10px 15px;
       font-size: 14px;
     }
+  }
+
+  .contact-deco {
+    background-image: url('./../components/img/rose.jpg');
+    background-size: cover; /* Assure que l'image couvre toute la div */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 30vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    
   }
