@@ -1,6 +1,7 @@
 {
   "name": "wedding-site",
   "version": "0.1.0",
+  "homepage": "https://vincentgaut.github.io/wedding-site/",
   "private": true,
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
