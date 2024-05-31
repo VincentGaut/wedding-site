@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Commentaires from './Commentaires';
 import './../styles/Regime.css';
 
-const Regime = ({Guest}) => {
+const Regime = ({Guest,setSubmitted}) => {
     const [guest,setGuest] = useState(Guest);
 
     const [isCheckedAucun, setIsCheckedAucun] = useState(() =>initStateGuest(Guest,0));
@@ -10,9 +10,13 @@ const Regime = ({Guest}) => {
     const [isCheckedVegetalien, setIsCheckedVegetalien] = useState(() =>initStateGuest(Guest,2));
     const [isCheckedAllergie, setIsCheckedAllergie] = useState(() =>initStateGuest(Guest,3));
     const [isCheckedAutre, setIsCheckedAutre] = useState(() =>initStateGuest(Guest,4));
-    
+    const [submittedGuest,setsubmittedGuest] = useState(false)
 
     const [isButtonClicked, setIsButtonClicked] = useState(false);
+
+    useEffect ( () => {
+      setSubmitted(submittedGuest)
+    },[submittedGuest])
 
     const handleCheckboxAucun = (event) => {
         setIsCheckedAucun(event.target.checked);
@@ -234,7 +238,7 @@ const Regime = ({Guest}) => {
         </div>
       
     </div>
-    <Commentaires Guest={guest}></Commentaires>
+    <Commentaires Guest={guest} setSubmitted={setsubmittedGuest}></Commentaires>
 </div>
 );
   

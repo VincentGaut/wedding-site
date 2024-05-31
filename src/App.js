@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes,Navigate  } from 'react-router-dom';
+import { BrowserRouter, Route, Routes,Navigate,useLocation   } from 'react-router-dom';
 
 import './App.css';
 import Navbar from './components/Navbar';
@@ -12,11 +12,18 @@ import Schedule from './components/Schedule';
 import Presence from './components/Presence';
 import LoginPage from './components/Auth/LoginPage';
 
+const App = () => {
+  return (
+    <BrowserRouter>
+      <AppContent />
+      </BrowserRouter>
+  );
+};
 
-
-function App() {
-  
+const AppContent  = () => {
+  const location = useLocation();
   const isAuthenticated = localStorage.getItem('authenticated') === 'true';
+  const noNavbarRoutes = ['/'];
   /*return (
     <BrowserRouter>
     <Navbar />
@@ -35,20 +42,22 @@ function App() {
     </BrowserRouter>
   );*/
   return (
-    <BrowserRouter>
-    <Navbar />
+    <div>
+    {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
       <div className='container'>
         
         <Routes>
-          <Route path="/" exact element={<Homepage></Homepage>} />
+          <Route path="/" exact element={<LoginPage></LoginPage>} />
+          <Route path="/Bienvenue" element={<Homepage></Homepage>} />
           <Route path="/Presence" element={<Presence></Presence>} />
           <Route path="/gallery" element={<Gallery></Gallery>}/>
           <Route path="/services" element={<Schedule></Schedule>} />
           <Route path="/contact" element={<Contact></Contact>} />
         </Routes>
       </div>
-      <Footer></Footer>
-    </BrowserRouter>
+      {!noNavbarRoutes.includes(location.pathname) && <Footer></Footer>}
+      
+      </div>
   );
 }
 

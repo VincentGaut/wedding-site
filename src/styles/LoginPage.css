@@ -1,0 +1,71 @@
+
+.LoginPage-wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    background-image: url('./../components/img/DSC_0735_NB.jpg');
+    background-size: cover; /* Assure que l'image couvre toute la div */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.Login-text-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+.button-wrapper{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.button-enter-page{
+    align-self: flex-end;
+    padding: 10px 20px;
+    background: #9d3c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    opacity: 1;
+}
+
+.button-enter-page:hover {
+    background: #753535;
+  }
+.firstPage-save-the-date{
+    color: #000;
+    font-size: 20px;
+    font-size: 30px;
+}
+
+
+
+.firstPage-name{
+    color: #000;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.firstPage-date{
+    color: #000;
+    font-style: italic;
+    font-size: 20px;
+}

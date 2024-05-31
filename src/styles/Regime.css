@@ -1,4 +1,11 @@
 
+.regime-alimentaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .regime-aucun{
     padding: 20px;
     width: 300px;
@@ -7,6 +14,9 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .regime-végétarien{
@@ -17,6 +27,9 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .regime-végétalien{
@@ -27,6 +40,9 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .regime-alergie{
@@ -37,6 +53,9 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .regime-autre{
@@ -47,4 +66,7 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

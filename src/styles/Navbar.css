@@ -31,6 +31,7 @@
   .initiales-wrapper{
     justify-content: center;
     align-items: center;
+    display: flex;
   }
   .navbar {
     display: flex;
@@ -51,7 +52,10 @@
     height: 10vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
     
   }
-  
+
+  .logo{
+    
+  }  
   .navbar-links {
     list-style: none;
     display: flex;

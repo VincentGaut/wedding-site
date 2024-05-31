@@ -6,7 +6,7 @@ import './../styles/Firebase.css';
 
 
 
-const FirebaseResult = ({Search,Data}) => { 
+const FirebaseResult = ({Search,Data,resetSearch}) => { 
 
   const [search,setSeacrh] = useState(Search);
   const [formData, setFormData] = useState(Data);
@@ -19,6 +19,11 @@ const FirebaseResult = ({Search,Data}) => {
   const [found,setFound] = useState(false);
   const[Foundguest,setFoundguest] = useState({});
   const[FoundguestId,setFoundguestId] = useState({});
+  const [errorSearch, seterrorSearch] = useState(false);
+  const [noUser, setnoUser] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [submittedOver, setSubmittedOver] = useState(false);
+  
 
   const ref = firebase.firestore().collection("guest");
 
@@ -33,7 +38,7 @@ const FirebaseResult = ({Search,Data}) => {
       });
       setGuest(items);
       setloading(false)*/
-      try {
+      
         ref.get()
         .then((item) => {
           const items = item.docs.map((doc) => doc.data())
@@ -43,11 +48,12 @@ const FirebaseResult = ({Search,Data}) => {
           setGuestId(itemsId)
           setloading(false);
         })
-        .catch((error) => { console.log(error); })
-      }
-      catch {
-        console.log("error login firebase")
-      }
+        .catch((error) => { console.log(error);
+          seterrorSearch(true);
+          console.log(errorSearch);
+         })
+      
+
       
       
   }
@@ -62,39 +68,70 @@ const FirebaseResult = ({Search,Data}) => {
               {
                 if ((((guest[i].prenom).localeCompare(Data.prenom, 'en', { sensitivity: 'base' }) )==0)&&
                 (((guest[i].nom).localeCompare(Data.nom, 'en', { sensitivity: 'base' }) )==0))
-              {
-                setFound(true)
-                setFoundguest(guest[i])
-                setFoundguestId(guestId[i])
-                sessionStorage.setItem('id', guestId[i]);
-                //console.log("guest log " ,guest[i])
-                
+                {
+                  setFound(true)
+                  setFoundguest(guest[i])
+                  setFoundguestId(guestId[i])
+                  sessionStorage.setItem('id', guestId[i]);
+                  //console.log("guest log " ,guest[i])
+                  
+                }
+                else
+                {
+                  setnoUser(true)
+                }
               }
-              }
+              else
+                {
+                  setnoUser(true)
+                }
           }
       }
+      
     
   }
+
+
   useEffect ( () => {
     setSeacrh(Search)
+    console.log('Form changer:', Data);
   },[Search])
   useEffect ( () => {
     setFormData(Data)
+    
   },[Data])
 
   useEffect ( () => {
     if (search)
       {
         getGuest();
-        
+        console.log('Form submitted:', Search);
       }
+      console.log('Form submitted:', Search);
     
   },[search,formData]);
 
   useEffect ( () => {
     checkNames();
+    //setSubmittedOver(false)
   },[guest])
 
+  useEffect ( () => {
+    if (submitted)
+      {
+        console.log("form submitted",submitted)
+        setnoUser(false)
+        setAuthorized(false)
+        
+        setSeacrh(false)
+        setSubmitted(false)
+        setloading(false)
+        setSubmittedOver(true)
+
+        resetSearch(false)
+      }
+    
+  },[submitted])
   useEffect ( () => {
     if (found)
       {
@@ -102,6 +139,10 @@ const FirebaseResult = ({Search,Data}) => {
         setAuthorized(true)
         sessionStorage.setItem('prenom', Foundguest.prenom);
         sessionStorage.setItem('nom', Foundguest.nom);
+        setnoUser(false)
+      }
+      else{
+        
       }
   },[Foundguest])
 
@@ -118,9 +159,33 @@ const FirebaseResult = ({Search,Data}) => {
       //console.log("found success " ,Foundguest)
       return (
 
-    <FirebaseHandler Guest={Foundguest}></FirebaseHandler>
+    <FirebaseHandler Guest={Foundguest} setSubmitted= {setSubmitted}></FirebaseHandler>
   );
     }
+    else if (errorSearch)
+      {
+        return (
+        <div className='loading-message'>
+          <h1 > Une erreur s'est produite veuillez nous contacter </h1>
+        </div>
+        );
+      }
+    else if (noUser)
+      {
+        return (
+        <div className='loading-message'>
+          <h1 > Invité introuvale </h1>
+        </div>
+        );
+      }
+      else if (submittedOver)
+        {
+          return (
+          <div className='loading-message'>
+            <h1 > Merci d'avoir enregistré votre réponse </h1>
+          </div>
+          );
+        }
   
 }
 

@@ -7,7 +7,7 @@ footer {
     width: 100%;
     display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    justify-content: space-between;
   }
 
   .footer-text{
@@ -15,13 +15,57 @@ footer {
     font-style: normal;
     font-weight: 400;
     align-self: flex-start;
+    display: flex;
   }
 
-  .footer-text2{
+  .footer-text3{
     font-family: Amatic;
     font-style: normal;
     font-weight: 400;
     align-self: flex-end;
-    margin-right: 0;
+    display: flex;
+    
+  }
+
+  .logo-footer3{
+   
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-image: url('./../components/img/ring.png');
+    background-size: contain; /* Assure que l'image couvre toute la div */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 10vw; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 10vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    
+  }
+
+  .logo-footer1{
+   
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-image: url('./../components/img/marie.png');
+    background-size: contain; /* Assure que l'image couvre toute la div */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 10vw; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 10vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    
+  }
+
+  .phone-logo{
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-image: url('./../components/img/phone.png');
+    background-size: cover; /* Assure que l'image couvre toute la div */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 5vw; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 5vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    justify-content: center;
+  }
+  .logo-footer2{
+    display: flex;
+    align-items: center;
   }
   

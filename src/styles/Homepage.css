@@ -7,7 +7,7 @@
 }
 .header_pres{
     width: 100%;
-
+    background-color: #fff;
 }
 .presentation{
 
@@ -35,51 +35,49 @@
 }
 
 .homepage{
-    height: 100vh;
+    height: 110vh;
     width: 100%;
-    background-color: #fff;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin : 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
 }
 
-.rose-wrapper{
-    height: 45vh;
-    width: 45vh;
-    padding-top: 20px;   
-    align-self: flex-start; /* Aligne l'élément à gauche sur la ligne */
-}
 
-.rose-wrapper2{
-    height: 45vh;
-    width: 45vh;
-    bottom: 0; /* Place l'ancre en bas */
-    transform: rotate(180deg);
-    position: relative;
-    align-self: flex-end; /* Aligne l'élément à gauche sur la ligne */
-}
-.rose{
-    background-image: url('./../components/img/invitation_rose_rouge.png');
+
+.wrapper-text{
+    /*position: relative;
+    height: 35vh;
+    align-self: center; /* Aligne l'élément à gauche sur la ligne */
+    /*width: 50%;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
+    background-image: url('./../components/img/couronne2.png');
     background-size: contain; /* Assure que l'image couvre toute la div */
-    background-position: left; /* Centre l'image */
+    background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    width: 50%; /* La div enfant (background-image) occupe toute la largeur de son parent */
     height: 100%; /* La div enfant (background-image) occupe toute la hauteur de son parent */
     position: relative; /* Nécessaire pour positionner le contenu par-dessus */
-
+    display: flex;
+    justify-content: center;
 }
-.wrapper-text{
-    position: relative;
-    height: 100vh;
-    align-self: center; /* Aligne l'élément à gauche sur la ligne */
-    width: 100%;
 
+.text-container{
+    align-self: center; /* Aligne l'élément à gauche sur la ligne */
+   
 }
 
 .text-bienvenue{
     text-align: center; /* Centre le texte */
     color: #000;
-    font-family: "Josefin Sans";
+    font-family: "Lucida Console", "Courier New", monospace;
     font-size: 24px;
     line-height: 30px;
 }
@@ -88,7 +86,7 @@
     text-align: center; /* Centre le texte */
     color: #000;
     font-size: 24px;
-    font-family: Amatic;
+    font-family: "Lucida Console", "Courier New", monospace;
     line-height: 1.2;
 }
 
@@ -99,34 +97,38 @@
     letter-spacing: 2px;
 }
 
-.fleur-wrapper{
-    height: 200px;
-    width: 100%;
-}
-
-.fleur-wrapper1{
-    height: 200px;
-    width: 100%;
-    transform: rotate(180deg);
-}
-
-.fleur{
-    background-image: url('./../components/img/fleur.png');
-    background-size: contain; /* Assure que l'image couvre toute la div */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
-    height: 100%; /* La div enfant (background-image) occupe toute la hauteur de son parent */
-    position: relative; /* Nécessaire pour positionner le contenu par-dessus */
-
-}
 
 .map-wrapper{
     align-self: center; /* Aligne l'élément à gauche sur la ligne */
-    background-color: #fff;
     justify-content: center;
     display: flex;
     margin: 10px;
+}
+
+.lieux-text-container{
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #f9f9f9;
+    opacity: 0.8;
+}
+.lieux-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-image: url('./../components/img/hotel-la-gentilhommiere-facade-artres-475609NB.jpg');*/
+    background-image: url('./../components/img/hotel-la-gentilhommiere-facade-artres-475609.jpg');
+    /*background-image: url('./../components/img/hotel-la-gentilhommiere-facade-artres-429005.jpg');*/
+    /*background-image: url('./../components/img/hotel-la-gentilhommiere-facade-artres-nb.jpg');*/
+    background-size: cover; /* Assure que l'image couvre toute la div */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    height: 100vh;
+    justify-content: center;
 }
 
 .homepage-deco {

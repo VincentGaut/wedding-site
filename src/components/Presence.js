@@ -5,7 +5,7 @@ import FirebaseResult from './Firebase.js';
 
 const Presence = () => {
     const [isPresent, setIsPresent] = useState(false);
-    const [search,setSeacrh] = useState(false);
+    const [search,setSearch] = useState(false);
     const [formData, setFormData] = useState({
         prenom: '',
         nom: ''
@@ -25,10 +25,10 @@ const Presence = () => {
     const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    //console.log('Form submitted:', formData);
+    console.log('Form submitted:', formData);
     setSubmittedData(formData);
-    setSeacrh(true);
-    //clearSubmit()
+    setSearch(true);
+    clearSubmit()
     };
 
 
@@ -45,10 +45,10 @@ const Presence = () => {
     return (
       <div className='presence-wrapper'>
         <section id='presence'>
-        <form onSubmit={handleSubmit}>
+        <form className="form-presence" onSubmit={handleSubmit}>
         <div className='information-form'>
             <div className='prenom-form'>
-            <label htmlFor="prenom">Prenom :</label>
+            <label className="input-presence" htmlFor="prenom">Prenom :</label>
             <input
                 type="text"
                 id="prenom"
@@ -75,6 +75,7 @@ const Presence = () => {
 
       <FirebaseResult Search = {search}
                       Data = {submittedData}
+                      resetSearch ={setSearch}
                       ></FirebaseResult>
       </section>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import firebase from './config';
 import './../styles/Commentaires.css'
 
@@ -10,13 +10,18 @@ const Comment = ({ text }) => (
 );
 
 // Composant principal de la boîte de commentaires
-const Commentaires = ({Guest}) => {
+const Commentaires = ({Guest,setSubmitted}) => {
 const [guest,setGuest] = useState(Guest);
   const [comments, setComments] = useState([]); // État pour stocker les commentaires
   const [comment, setComment] = useState('');   // État pour stocker le texte du formulaire
-const [dataSend,setDataSend] = useState(false);
+  const [submittedGuest,setsubmittedGuest] = useState(false)
 
   const ref = firebase.firestore().collection("guest");
+
+
+  useEffect ( () => {
+    setSubmitted(submittedGuest)
+  },[submittedGuest])
 
   function setInfoGuestDB ()
   {
@@ -39,6 +44,8 @@ const [dataSend,setDataSend] = useState(false);
         .catch((err) => {
           console.error(err)
     })
+    //sessionStorage.setItem('submit', true);
+    setsubmittedGuest(true)
       }
     
   }
@@ -81,7 +88,7 @@ const [dataSend,setDataSend] = useState(false);
   return (
     <div className="comment-box">
       <h2>Commentaires</h2>
-      <form onSubmit={handleFormSubmit}>
+      <form className="commentaire-form" onSubmit={handleFormSubmit}>
         <textarea
           value={comment}
           onChange={handleInputChange}
@@ -89,11 +96,8 @@ const [dataSend,setDataSend] = useState(false);
           rows="4"
           cols="50"
         />
-        <button type="submit">Ajouter un commentaire</button>
+        <button className ="commentaire-button" type="submit">Enregistrer les informations</button>
       </form>
-      <div className="comment-list">
-        
-      </div>
     </div>
   );
 };

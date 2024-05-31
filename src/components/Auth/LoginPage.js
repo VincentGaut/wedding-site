@@ -8,30 +8,15 @@ import { auth } from '../config';
 import './../../styles/LoginPage.css'
 
 const LoginPage = () => {
+  console.log("");
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const history = useNavigate()();
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     // Remplacez ceci par votre logique de validation
-    /*if (username === 'user' && password === 'password') {
-      // Simulez la connexion
-      localStorage.setItem('authenticated', 'true');
-      history.push('/page1'); // Redirigez vers l'une des pages protégées après la connexion
-    } else {
-      alert('Invalid credentials');
-    }*/
-    /*firebase
-    .auth()
-    .signInWithEmailAndPassword("vincent1.gautier@gmail.com",
-    "Lk0V%#I21vYo4AIR")
-    .then ( ()=> {
-      
-    })
-    .catch((err) => {
-      console.log(err)
-    })*/
-    signInWithEmailAndPassword(auth, "vincent1.gautier@gmail.com", "Lk0V%#I21vYo4AIR")
+    signInWithEmailAndPassword(auth, process.env.REACT_APP_FIREBASE_ID,
+                              process.env.REACT_APP_FIREBASE_PASS)
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
@@ -43,32 +28,28 @@ const LoginPage = () => {
             const errorMessage = error.message;
             console.log(errorCode, errorMessage)
         });
+        navigate('/Bienvenue');
   };
 
   return (
     <div className='LoginPage-wrapper'>
-      <h2>Login</h2>
-      <div>
-        <label>
-          Username:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </label>
+      <div className='Login-text-wrapper'>
+        <div className = "firstPage-save-the-date">
+          <h1> SAVE THE DATE </h1>
+        </div>
+
+        <div className = "firstPage-name">
+          <h2> Emeline & Vincent </h2>
+        </div>
+
+        <div className='button-wrapper'>
+          <button className= "button-enter-page" onClick={handleLogin}>Entrer</button>
+        </div>
+
+        <div className = "firstPage-date">
+          <h2> 03 Mai 2025 </h2>
+        </div>
       </div>
-      <div>
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-      </div>
-      <button onClick={handleLogin}>Login</button>
     </div>
   );
 };

@@ -3,12 +3,12 @@ import './../styles/CheckBox.css'; // Importez le fichier CSS pour les styles
 
 import GuestInfo from './GuestInfo';
 
-const Checkbox = ({Guest}) => {
+const Checkbox = ({Guest,setSubmitted}) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [guest,setGuest] = useState(Guest);
   const [name,setName] = useState(Guest.prenom+" "+Guest.nom);
-  
+  const [submittedGuest,setsubmittedGuest] = useState(false)
 
   useEffect ( () => {
     setGuest(Guest)
@@ -26,10 +26,14 @@ const Checkbox = ({Guest}) => {
     setIsButtonClicked(true);
   };
 
+  useEffect ( () => {
+    setSubmitted(submittedGuest)
+  },[submittedGuest])
+
   if (!isButtonClicked)
     {
         return (
-            <div>
+            <div className='GuestBox-container'>
                 <div className="round-checkbox-container">
                   <label className="round-checkbox-label-init">
                       <input
@@ -53,7 +57,8 @@ const Checkbox = ({Guest}) => {
     {
         return (
             <div>
-                    {isButtonClicked && <GuestInfo Guest={guest}></GuestInfo>}
+                    {isButtonClicked && <GuestInfo Guest={guest}
+                    setSubmitted={setsubmittedGuest}></GuestInfo>}
                 </div>
         );
         

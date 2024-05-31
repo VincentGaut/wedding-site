@@ -36,14 +36,14 @@ const Contact = () => {
       return (
         <div>
             <section id='contact'>
-                <form onSubmit={handleSubmit}>
-                    <label>Name</label>
+                <form className="contact-form" onSubmit={handleSubmit}>
+                    <label className='input-form-contact'>Name</label>
                     <input type="text" name="name" value={formData.name} onChange={handleChange} required />
                     <label>Email</label>
                     <input type="email" name="email" value={formData.email} onChange={handleChange} required />
                     <label>Message</label>
                     <textarea name="message" value={formData.message} onChange={handleChange} required />
-                    <button type="submit">Send</button>
+                    <button className = "button-contact" type="submit">Send</button>
                 </form>
                 
             </section>

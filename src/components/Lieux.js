@@ -146,7 +146,7 @@ const MapComponent = () => {
         </GoogleMap>
       </LoadScript>
     );*/
-    return (
+    /*return (
       <APIProvider apiKey={process.env.REACT_APP_MAPS_API} onLoad={() => console.log('Maps API has loaded.')}>
         <Map
           defaultZoom={13}
@@ -156,7 +156,7 @@ const MapComponent = () => {
             <Marker position={center} />
         </Map>
       </APIProvider>
-    );
+    );*/
   };
   
   export default MapComponent;
