@@ -8,7 +8,6 @@ import { auth } from '../config';
 import './../../styles/LoginPage.css'
 
 const LoginPage = () => {
-  console.log("");
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -20,7 +19,7 @@ const LoginPage = () => {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            console.log(user);
+            
             sessionStorage.setItem('authenticated', true);
         })
         .catch((error) => {

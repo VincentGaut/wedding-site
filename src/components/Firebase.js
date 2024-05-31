@@ -94,7 +94,6 @@ const FirebaseResult = ({Search,Data,resetSearch}) => {
 
   useEffect ( () => {
     setSeacrh(Search)
-    console.log('Form changer:', Data);
   },[Search])
   useEffect ( () => {
     setFormData(Data)
@@ -105,9 +104,9 @@ const FirebaseResult = ({Search,Data,resetSearch}) => {
     if (search)
       {
         getGuest();
-        console.log('Form submitted:', Search);
+        
       }
-      console.log('Form submitted:', Search);
+      
     
   },[search,formData]);
 
@@ -119,7 +118,7 @@ const FirebaseResult = ({Search,Data,resetSearch}) => {
   useEffect ( () => {
     if (submitted)
       {
-        console.log("form submitted",submitted)
+        
         setnoUser(false)
         setAuthorized(false)
         

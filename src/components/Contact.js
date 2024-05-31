@@ -10,6 +10,8 @@ const Contact = () => {
         message: ''
       });
 
+      const [submitted, setSubmitted] = useState(false);
+
       const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -26,8 +28,10 @@ const Contact = () => {
             process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY)
           .then((result) => {
               console.log(result.text);
+              setSubmitted(true);
           }, (error) => {
               console.log(error.text);
+              setSubmitted(false);
           });
         
         e.target.reset();
@@ -47,6 +51,7 @@ const Contact = () => {
                 </form>
                 
             </section>
+            {submitted && <h2 > Message bien envoyé</h2>}
             <div className='contact-deco'>
                     
             </div>
