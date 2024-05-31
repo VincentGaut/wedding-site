@@ -44,12 +44,12 @@
     color: #fff;
     font-size: 1.5rem;
     text-decoration: none;
-    background-image: url('./../components/img/rings.png');
+    background-image: url('./../components/img/logo4.png');
     background-size: contain; /* Assure que l'image couvre toute la div */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    width: 10vw; /* La div enfant (background-image) occupe toute la largeur de son parent */
-    height: 10vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
+    width: 20vw; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    height: 20vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
     
   }
 
@@ -65,6 +65,7 @@
     font-family: "Josefin Sans";
     font-size: 25px;
     font-weight: 400;
+    align-items: center;
   }
   
   .navbar-links a {

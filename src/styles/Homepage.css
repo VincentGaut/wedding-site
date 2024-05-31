@@ -35,7 +35,7 @@
 }
 
 .homepage{
-    height: 110vh;
+    height: 130vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -62,7 +62,7 @@
     background-size: contain; /* Assure que l'image couvre toute la div */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    width: 50%; /* La div enfant (background-image) occupe toute la largeur de son parent */
+    width: 100%; /* La div enfant (background-image) occupe toute la largeur de son parent */
     height: 100%; /* La div enfant (background-image) occupe toute la hauteur de son parent */
     position: relative; /* Nécessaire pour positionner le contenu par-dessus */
     display: flex;

@@ -3,7 +3,7 @@
     width: 100vw;
     height: 100vh;
     background-color: #fff;
-    background-image: url('./../components/img/DSC_0735_NB.jpg');
+    background-image: url('./../components/img/main_page.jpg');
     background-size: cover; /* Assure que l'image couvre toute la div */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
@@ -22,8 +22,10 @@
     align-items: center;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50vw;
+    height: 50vh;
+    
 }
 
 .button-wrapper{
@@ -44,7 +46,6 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-style: italic;
-    opacity: 1;
 }
 
 .button-enter-page:hover {
@@ -54,6 +55,8 @@
     color: #000;
     font-size: 20px;
     font-size: 30px;
+
+    
 }
 
 

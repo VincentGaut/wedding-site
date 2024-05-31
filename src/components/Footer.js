@@ -9,7 +9,6 @@ const Footer = () => (
     </div>
 
     <div className='footer-text2'>
-      <p > Contact : </p>
       <div className='logo-footer2'>
         <div className='phone-logo'></div>
         <div ><p> 06 38 23 18 72 / 06 16 28 08 22</p></div>

@@ -21,18 +21,11 @@ const Navbar = () => {
   return (
     <div className='navbar-div'>
       <div className='navbar-wrapper'>
-        <div className='navbar-ligne1'>
-          <div className='initiales-wrapper'>
-          <span onClick={handleClick} >
-            <h2 className='initiales'> E+V</h2>
-          </span>
-          <div className='logo'></div>
-        </div>
           
-        </div>
+        
         <div className='navbar-ligne2'>
           <nav className="navbar">
-            <div className="navbar-logo"></div>
+            <div className="navbar-logo" onClick={handleClick} style={{ cursor: 'pointer' }}></div>
             <div className="navbar-toggle" onClick={toggleNavbar}>
               <div></div>
               <div></div>
@@ -42,7 +35,7 @@ const Navbar = () => {
               <li><NavLink  to="/Bienvenue"  onClick={() => setIsOpen(false)}>Bienvenue</NavLink></li>
               <li><NavLink to="/Presence"  onClick={() => setIsOpen(false)}>Confirme ta presence</NavLink></li>
               <li><NavLink to="/contact"  onClick={() => setIsOpen(false)}>Contact</NavLink></li>
-              <li><NavLink to="/gallery"  onClick={() => setIsOpen(false)}>Gallery</NavLink></li>
+              <li><NavLink to="/gallery"  onClick={() => setIsOpen(false)}>Gallerie</NavLink></li>
             </ul>
           </nav>
         </div>

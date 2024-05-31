@@ -8,13 +8,15 @@ footer {
     display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
   }
 
   .footer-text{
     font-family: Amatic;
     font-style: normal;
     font-weight: 400;
-    align-self: flex-start;
+    align-items: center;
     display: flex;
   }
 
@@ -22,8 +24,10 @@ footer {
     font-family: Amatic;
     font-style: normal;
     font-weight: 400;
-    align-self: flex-end;
+    
     display: flex;
+    flex-direction: row;
+    align-items: center;
     
   }
 
