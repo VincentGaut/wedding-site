@@ -111,7 +111,7 @@ const CheckBoxDispo = ({Guest}) => {
       function initInvitation (guestInfo)
     {
       
-      if ((guestInfo.invitation == "") || (guestInfo.invitation == "proche"))
+      if ((guestInfo.invitation == "") || (guestInfo.invitation == "repas"))
         {
           return true;
         }

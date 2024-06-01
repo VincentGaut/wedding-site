@@ -28,11 +28,19 @@ const [guest,setGuest] = useState(Guest);
     
     const array = Object.keys(Guest)
     let dataGuest = {};
+    //console.log(array)
     for (let i=0;i<array.length;i++)
       {
+        if (sessionStorage.getItem(array[i])!=null)
+          {
+            dataGuest[array[i]] = sessionStorage.getItem(array[i])
+          }
+          else
+          {
+            dataGuest[array[i]] = Guest[array[i]]
+          }
         
-        dataGuest[array[i]] = sessionStorage.getItem(array[i])
-          
+        //console.log(dataGuest[array[i]])
       }
       
 

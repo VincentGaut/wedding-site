@@ -42,18 +42,25 @@ const Information = () => {
             <div className='information-container'>
               <div className='information-text'>
                 <h2> Se rendre à la Gentilhomiere : </h2>
+                <p> Plus d'informations concernant le programme seront publiées plus tard</p>
                 <ul className='list-info'>
-                  <li>En voiture : </li>
-                  <li>En train : </li>
+                  <li><b>En voiture :</b> se rendre à l'adresse 2 Rue de l'Église, 59269 Artres </li>
+                  <li><b>En train : </b> Le domaine de la Gentilhomiere se trouve à coté de Valenciennes,
+                    qui est accessible en train depuis Lille
+                  </li>
                 </ul>
 
                 <h2> Se loger : </h2>
-                <p> Le domaine de la Gentilhomiere se trouve à coté de valencienne</p>
+                <p> De nombreux hotels sont disponibles à Valenciennes mais aussi à Artres. Des 
+                  chambres d'hôtes sont également disponibles.
+                </p>
               </div>
             </div>
             <section id='contact'>
-              <p> Pour toute question n'hésitez pas à nous contacter !</p>
+              <p> Pour toutes questions n'hésitez pas à nous contacter par téléphone ou par le formulaire!</p>
                 <form className="contact-form" onSubmit={handleSubmit}>
+                  <h2>Formulaire de contact</h2>
+                  <div>
                     <label className='input-form-contact'>Name</label>
                     <input type="text" name="name" value={formData.name} onChange={handleChange} required />
                     <label>Email</label>
@@ -61,6 +68,7 @@ const Information = () => {
                     <label>Message</label>
                     <textarea name="message" value={formData.message} onChange={handleChange} required />
                     <button className = "button-contact" type="submit">Send</button>
+                  </div>
                 </form>
                 
             </section>
