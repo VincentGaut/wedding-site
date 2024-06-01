@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wedding-site/static/css/main.ef88aaa0.css",
+    "main.css": "/wedding-site/static/css/main.a40430d5.css",
     "main.js": "/wedding-site/static/js/main.73595f5e.js",
     "static/js/453.d6f3f4a8.chunk.js": "/wedding-site/static/js/453.d6f3f4a8.chunk.js",
     "static/media/valse_contraste.JPG": "/wedding-site/static/media/valse_contraste.21d8f20c279dd3a869c6.JPG",
@@ -14,12 +14,12 @@
     "static/media/logo4.png": "/wedding-site/static/media/logo4.7eecc592bc77c1b85890.png",
     "static/media/phone.png": "/wedding-site/static/media/phone.053d798169e40701153d.png",
     "index.html": "/wedding-site/index.html",
-    "main.ef88aaa0.css.map": "/wedding-site/static/css/main.ef88aaa0.css.map",
+    "main.a40430d5.css.map": "/wedding-site/static/css/main.a40430d5.css.map",
     "main.73595f5e.js.map": "/wedding-site/static/js/main.73595f5e.js.map",
     "453.d6f3f4a8.chunk.js.map": "/wedding-site/static/js/453.d6f3f4a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef88aaa0.css",
+    "static/css/main.a40430d5.css",
     "static/js/main.73595f5e.js"
   ]
 }
