@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
-import './../styles/Contact.css';
+import './../styles/Information.css';
 
-const Contact = () => {
+const Information = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -38,8 +38,21 @@ const Contact = () => {
       };
     
       return (
-        <div>
+        <div className='information-wrapper'>
+            <div className='information-container'>
+              <div className='information-text'>
+                <h2> Se rendre à la Gentilhomiere : </h2>
+                <ul className='list-info'>
+                  <li>En voiture : </li>
+                  <li>En train : </li>
+                </ul>
+
+                <h2> Se loger : </h2>
+                <p> Le domaine de la Gentilhomiere se trouve à coté de valencienne</p>
+              </div>
+            </div>
             <section id='contact'>
+              <p> Pour toute question n'hésitez pas à nous contacter !</p>
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <label className='input-form-contact'>Name</label>
                     <input type="text" name="name" value={formData.name} onChange={handleChange} required />
@@ -60,4 +73,4 @@ const Contact = () => {
 
 }
 
-export default Contact
+export default Information

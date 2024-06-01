@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Homepage from './components/Homepage';
-import Contact from './components/Contact';
+import Information from './components/Informations';
 import Gallery from './components/Gallery';
 import Schedule from './components/Schedule';
 import Presence from './components/Presence';
@@ -14,7 +14,7 @@ import LoginPage from './components/Auth/LoginPage';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <AppContent />
       </BrowserRouter>
   );
@@ -52,7 +52,7 @@ const AppContent  = () => {
           <Route path="/Presence" element={<Presence></Presence>} />
           <Route path="/gallery" element={<Gallery></Gallery>}/>
           <Route path="/services" element={<Schedule></Schedule>} />
-          <Route path="/contact" element={<Contact></Contact>} />
+          <Route path="/contact" element={<Information></Information>} />
         </Routes>
       </div>
       {!noNavbarRoutes.includes(location.pathname) && <Footer></Footer>}

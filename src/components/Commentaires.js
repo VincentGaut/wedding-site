@@ -42,7 +42,7 @@ const [guest,setGuest] = useState(Guest);
         .doc(dataGuest.id)
         .set(dataGuest)
         .catch((err) => {
-          console.error(err)
+        console.error(err)
     })
     //sessionStorage.setItem('submit', true);
     setsubmittedGuest(true)

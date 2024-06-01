@@ -50,7 +50,7 @@
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     width: 20vw; /* La div enfant (background-image) occupe toute la largeur de son parent */
     height: 20vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
-    
+    align-self: center;
   }
 
   .logo{
@@ -98,16 +98,22 @@
     background-color: #fff;
     margin: 4px 0;
   }
+
+  .navbar-ligne2{
+    width: 100%;
+  }
   
   @media (max-width: 768px) {
     .navbar-links {
       display: none;
       flex-direction: column;
       width: 100%;
-      position: absolute;
+      text-align: center;
       top: 60px;
       left: 0;
-      background-color: #333;
+      /*background-color: #333;*/
+      background-color: rgba(255, 255, 255, 0.7);
+      font-size: 22px;
     }
   
     .navbar-links.active {
@@ -116,5 +122,9 @@
   
     .navbar-toggle {
       display: flex;
+    }
+
+    .navbar-logo{
+      width: 70vw;
     }
   }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Menu from './Menu';
+import Rebond from './Rebond';
 
 import './../styles/CheckBoxDispo.css'
 
@@ -11,6 +12,7 @@ const CheckBoxDispo = ({Guest}) => {
   const [isCheckedOk, setIsCheckedOk] = useState(() =>initStateGuest(Guest,1));
   const [isCheckedNo, setIsCheckedNo] = useState(() => initStateGuest(Guest,2));
   const [isButtonClicked, setIsButtonClicked] = useState(false);
+  const [invitation, setInvitation] = useState(() => initInvitation(Guest));
 
   const [dispoBox, setdispoBox] = useState ("")
   
@@ -103,9 +105,26 @@ const CheckBoxDispo = ({Guest}) => {
         break;
         
         }
+      }
+
+
+      function initInvitation (guestInfo)
+    {
+      
+      if ((guestInfo.invitation == "") || (guestInfo.invitation == "proche"))
+        {
+          return true;
+        }
+        else 
+        {
+          return false;
+        }
+
     }
+    
         return (
-            <div>
+            <div className='infoDispo-wrapper'>
+              <h2> Jour J : </h2>
                 <div className="box-dispo">
                     <div className="round-checkbox-containerWait">
                         <label className="round-checkbox-label">
@@ -148,10 +167,17 @@ const CheckBoxDispo = ({Guest}) => {
                     
 
                 </div>
-                <div className='menu-wrapper'>
+                { invitation && <div className='menu-wrapper'>
                     <h3>Type de Menu : </h3>
-                    <Menu Guest={guest}></Menu>
-                </div>
+                     <Menu Guest={guest}></Menu>
+                </div>}
+
+                { invitation &&<div className='rebond-wrapper'>
+                 
+                  <h2> Rebond : </h2>
+                    <Rebond Guest={guest}></Rebond>
+                  
+                </div>}
             </div>
             
         

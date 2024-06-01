@@ -1,7 +1,42 @@
 #contact {
     padding: 20px;
-    
+    width: 100%;
   }
+
+  .information-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%
+  }
+.information-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*background-image: url('./../components/img/hotel-la-gentilhommiere-facade-artres-475609NB.jpg');*/
+  /*background-image: url('./../components/img/hotel-la-gentilhommiere-facade-artres-475609.jpg');*/
+  /*background-image: url('./../components/img/hotel-la-gentilhommiere-facade-artres-429005.jpg');*/
+  background-image: url('./../components/img/hotel-la-gentilhommiere-facade-artres-nb.jpg');
+  background-size: cover; /* Assure que l'image couvre toute la div */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  height: 50vh;
+  justify-content: center;
+}
+
+.information-text{
+  border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #f9f9f9;
+    opacity: 0.8;
+    text-align: center;
+
+}
 
 /* Style du formulaire */
 .contact-form {
@@ -71,17 +106,18 @@
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
-    form {
+    .contact-form {
       padding: 15px;
+      width: 50%;
     }
   
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
       font-size: 14px;
     }
   
-    form button {
+    .contact-form button {
       padding: 10px 15px;
       font-size: 14px;
     }

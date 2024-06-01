@@ -56,10 +56,10 @@ const Checkbox = ({Guest,setSubmitted}) => {
     else
     {
         return (
-            <div>
-                    {isButtonClicked && <GuestInfo Guest={guest}
-                    setSubmitted={setsubmittedGuest}></GuestInfo>}
-                </div>
+            <div className='checkBox-container'>
+                {isButtonClicked && <GuestInfo Guest={guest}
+                setSubmitted={setsubmittedGuest}></GuestInfo>}
+            </div>
         );
         
     }

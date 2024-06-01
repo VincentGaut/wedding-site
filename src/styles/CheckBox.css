@@ -1,5 +1,12 @@
-
-
+.GuestBox-container{
+  width: 25%;
+}
+.checkBox-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .round-checkbox-container {
     display: flex;
     flex-direction: column;
@@ -75,4 +82,11 @@
   
   .round-checkbox-button:hover {
     background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .GuestBox-container {
+      width: 50%;
+      
+    }
   }

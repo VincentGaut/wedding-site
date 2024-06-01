@@ -25,6 +25,7 @@ const Navbar = () => {
         
         <div className='navbar-ligne2'>
           <nav className="navbar">
+            <div className='empty element'></div>
             <div className="navbar-logo" onClick={handleClick} style={{ cursor: 'pointer' }}></div>
             <div className="navbar-toggle" onClick={toggleNavbar}>
               <div></div>
@@ -34,7 +35,7 @@ const Navbar = () => {
             <ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
               <li><NavLink  to="/Bienvenue"  onClick={() => setIsOpen(false)}>Bienvenue</NavLink></li>
               <li><NavLink to="/Presence"  onClick={() => setIsOpen(false)}>Confirme ta presence</NavLink></li>
-              <li><NavLink to="/contact"  onClick={() => setIsOpen(false)}>Contact</NavLink></li>
+              <li><NavLink to="/contact"  onClick={() => setIsOpen(false)}>Informations</NavLink></li>
               <li><NavLink to="/gallery"  onClick={() => setIsOpen(false)}>Gallerie</NavLink></li>
             </ul>
           </nav>

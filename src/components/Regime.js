@@ -218,7 +218,7 @@ const Regime = ({Guest,setSubmitted}) => {
                     className="round-checkbox-input"
                     />
                     <span className="round-checkbox-custom"></span>
-                    Alergies
+                    Allergies
                 </label>
             </div>
         </div>

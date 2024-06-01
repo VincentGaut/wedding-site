@@ -1,3 +1,7 @@
+.infoDispo-wrapper{
+  display: flex;
+  flex-direction: column;
+}
 .round-checkbox-containerWait {
     display: flex;
     flex-direction: column;

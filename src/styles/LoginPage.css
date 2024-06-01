@@ -24,7 +24,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.5);
     width: 50vw;
-    height: 50vh;
+    
     
 }
 
@@ -55,7 +55,7 @@
     color: #000;
     font-size: 20px;
     font-size: 30px;
-
+    text-align: center;
     
 }
 
@@ -65,10 +65,21 @@
     color: #000;
     font-style: italic;
     font-size: 20px;
+    text-align: center;
 }
 
 .firstPage-date{
     color: #000;
     font-style: italic;
     font-size: 20px;
+    text-align: center;
 }
+
+
+@media (max-width: 768px) {
+    .LoginPage-wrapper {
+        background-position: 75% 75%;
+    }
+  }
+
+  
