@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "./static/css/main.187ac42f.css",
-    "main.js": "./static/js/main.db22573a.js",
-    "static/js/453.d6f3f4a8.chunk.js": "./static/js/453.d6f3f4a8.chunk.js",
-    "static/media/valse_contraste.JPG": "./static/media/valse_contraste.21d8f20c279dd3a869c6.JPG",
-    "static/media/main_page.jpg": "./static/media/main_page.b9b460f6ce382a4a9732.jpg",
-    "static/media/hotel-la-gentilhommiere-facade-artres-475609.jpg": "./static/media/hotel-la-gentilhommiere-facade-artres-475609.6053837de97444f214a2.jpg",
-    "static/media/chat3.jpg": "./static/media/chat3.76ec88c65b64d2dbdbb9.jpg",
-    "static/media/couronne2.png": "./static/media/couronne2.413ad782ab34ce7e47bc.png",
-    "static/media/rose.jpg": "./static/media/rose.6900cdb4791648afb879.jpg",
-    "static/media/ring.png": "./static/media/ring.976b230e87796b902bc9.png",
-    "static/media/marie.png": "./static/media/marie.11770c2302c74a6e4f63.png",
-    "static/media/logo4.png": "./static/media/logo4.7eecc592bc77c1b85890.png",
-    "static/media/phone.png": "./static/media/phone.053d798169e40701153d.png",
-    "index.html": "./index.html",
-    "main.187ac42f.css.map": "./static/css/main.187ac42f.css.map",
-    "main.db22573a.js.map": "./static/js/main.db22573a.js.map",
-    "453.d6f3f4a8.chunk.js.map": "./static/js/453.d6f3f4a8.chunk.js.map"
+    "main.css": "/static/css/main.145cce22.css",
+    "main.js": "/static/js/main.961338cc.js",
+    "static/js/453.d6f3f4a8.chunk.js": "/static/js/453.d6f3f4a8.chunk.js",
+    "static/media/valse_contraste.JPG": "/static/media/valse_contraste.21d8f20c279dd3a869c6.JPG",
+    "static/media/main_page.jpg": "/static/media/main_page.b9b460f6ce382a4a9732.jpg",
+    "static/media/hotel-la-gentilhommiere-facade-artres-475609.jpg": "/static/media/hotel-la-gentilhommiere-facade-artres-475609.6053837de97444f214a2.jpg",
+    "static/media/chat3.jpg": "/static/media/chat3.76ec88c65b64d2dbdbb9.jpg",
+    "static/media/couronne2.png": "/static/media/couronne2.413ad782ab34ce7e47bc.png",
+    "static/media/rose.jpg": "/static/media/rose.6900cdb4791648afb879.jpg",
+    "static/media/ring.png": "/static/media/ring.976b230e87796b902bc9.png",
+    "static/media/marie.png": "/static/media/marie.11770c2302c74a6e4f63.png",
+    "static/media/logo4.png": "/static/media/logo4.7eecc592bc77c1b85890.png",
+    "static/media/phone.png": "/static/media/phone.053d798169e40701153d.png",
+    "index.html": "/index.html",
+    "main.145cce22.css.map": "/static/css/main.145cce22.css.map",
+    "main.961338cc.js.map": "/static/js/main.961338cc.js.map",
+    "453.d6f3f4a8.chunk.js.map": "/static/js/453.d6f3f4a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.187ac42f.css",
-    "static/js/main.db22573a.js"
+    "static/css/main.145cce22.css",
+    "static/js/main.961338cc.js"
   ]
 }
