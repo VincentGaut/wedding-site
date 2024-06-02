@@ -221,6 +221,9 @@ const Regime = ({Guest,setSubmitted}) => {
                     Allergies
                 </label>
             </div>
+            {isCheckedAllergie && <div className='description-allergie'>
+              <p>Décrit ton allergie dans les commentaires</p>
+              </div>}
         </div>
         <div className='regime-autre'>
         <div className="round-checkbox-container">
