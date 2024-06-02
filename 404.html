@@ -20,6 +20,17 @@
         body { border-top: 16px solid #ffa100; }
       }
     </style>
+
+    <script type="text/javascript">
+      // Rediriger toutes les requêtes vers index.html
+      var path = window.location.pathname;
+      var redirectTo = "/";  // Remplacer par le chemin correct si votre site n'est pas à la racine
+  
+      // Si le chemin n'est pas à la racine et ne contient pas un ".", rediriger vers /
+      if (path !== '/' && !path.includes('.')) {
+        window.location.href = redirectTo;
+      }
+    </script>
   </head>
   <body>
     <div id="message">
