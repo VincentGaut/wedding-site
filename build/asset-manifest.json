@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/wedding-site/static/css/main.7febd6fb.css",
-    "main.js": "/wedding-site/static/js/main.8475f72a.js",
+    "main.css": "/wedding-site/static/css/main.7958c0f6.css",
+    "main.js": "/wedding-site/static/js/main.0ca9de26.js",
     "static/js/453.d6f3f4a8.chunk.js": "/wedding-site/static/js/453.d6f3f4a8.chunk.js",
     "static/media/valse_contraste.JPG": "/wedding-site/static/media/valse_contraste.21d8f20c279dd3a869c6.JPG",
     "static/media/main_page.jpg": "/wedding-site/static/media/main_page.b9b460f6ce382a4a9732.jpg",
     "static/media/hotel-la-gentilhommiere-facade-artres-nb.jpg": "/wedding-site/static/media/hotel-la-gentilhommiere-facade-artres-nb.31b5d873ab7cbea1d8c1.jpg",
     "static/media/hotel-la-gentilhommiere-facade-artres-475609.jpg": "/wedding-site/static/media/hotel-la-gentilhommiere-facade-artres-475609.6053837de97444f214a2.jpg",
-    "static/media/chat3.jpg": "/wedding-site/static/media/chat3.76ec88c65b64d2dbdbb9.jpg",
+    "static/media/chat_couche.jpg": "/wedding-site/static/media/chat_couche.76ec88c65b64d2dbdbb9.jpg",
     "static/media/couronne2.png": "/wedding-site/static/media/couronne2.413ad782ab34ce7e47bc.png",
     "static/media/rose.jpg": "/wedding-site/static/media/rose.6900cdb4791648afb879.jpg",
     "static/media/ring.png": "/wedding-site/static/media/ring.976b230e87796b902bc9.png",
@@ -15,12 +15,12 @@
     "static/media/logo4.png": "/wedding-site/static/media/logo4.7eecc592bc77c1b85890.png",
     "static/media/phone.png": "/wedding-site/static/media/phone.053d798169e40701153d.png",
     "index.html": "/wedding-site/index.html",
-    "main.7febd6fb.css.map": "/wedding-site/static/css/main.7febd6fb.css.map",
-    "main.8475f72a.js.map": "/wedding-site/static/js/main.8475f72a.js.map",
+    "main.7958c0f6.css.map": "/wedding-site/static/css/main.7958c0f6.css.map",
+    "main.0ca9de26.js.map": "/wedding-site/static/js/main.0ca9de26.js.map",
     "453.d6f3f4a8.chunk.js.map": "/wedding-site/static/js/453.d6f3f4a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7febd6fb.css",
-    "static/js/main.8475f72a.js"
+    "static/css/main.7958c0f6.css",
+    "static/js/main.0ca9de26.js"
   ]
 }

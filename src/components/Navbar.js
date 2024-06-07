@@ -35,8 +35,8 @@ const Navbar = () => {
             <ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
               <li><NavLink  to="/Bienvenue"  onClick={() => setIsOpen(false)}>Bienvenue</NavLink></li>
               <li><NavLink to="/Presence"  onClick={() => setIsOpen(false)}>Confirme ta presence</NavLink></li>
-              <li><NavLink to="/contact"  onClick={() => setIsOpen(false)}>Informations</NavLink></li>
-              <li><NavLink to="/galery"  onClick={() => setIsOpen(false)}>Galerie</NavLink></li>
+              <li><NavLink to="/infos"  onClick={() => setIsOpen(false)}>Informations</NavLink></li>
+              <li><NavLink to="/galerie"  onClick={() => setIsOpen(false)}>Galerie</NavLink></li>
             </ul>
           </nav>
         </div>
