@@ -50,7 +50,7 @@ const AppContent  = () => {
           <Route path="/" exact element={<LoginPage></LoginPage>} />
           <Route path="/Bienvenue" element={<Homepage></Homepage>} />
           <Route path="/Presence" element={<Presence></Presence>} />
-          <Route path="/gallery" element={<Gallery></Gallery>}/>
+          <Route path="/galery" element={<Gallery></Gallery>}/>
           <Route path="/services" element={<Schedule></Schedule>} />
           <Route path="/contact" element={<Information></Information>} />
         </Routes>

@@ -24,7 +24,7 @@
     flex-direction: column;
     align-items: center;
 
-    background-image: url('./../components/img/chat3.jpg');
+    background-image: url('./../components/img/chat_couche.jpg');
     background-size: cover; /* Assure que l'image couvre toute la div */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
