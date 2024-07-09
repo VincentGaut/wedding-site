@@ -124,7 +124,7 @@ const CheckBoxDispo = ({Guest}) => {
     
         return (
             <div className='infoDispo-wrapper'>
-              <h2> Jour J : </h2>
+              {/*<h2> Jour J : </h2>*/}
                 <div className="box-dispo">
                     <div className="round-checkbox-containerWait">
                         <label className="round-checkbox-label">
@@ -172,12 +172,12 @@ const CheckBoxDispo = ({Guest}) => {
                      <Menu Guest={guest}></Menu>
                 </div>}
 
-                { invitation &&<div className='rebond-wrapper'>
+                {/* invitation &&<div className='rebond-wrapper'>
                  
                   <h2> Rebond : </h2>
                     <Rebond Guest={guest}></Rebond>
                   
-                </div>}
+                </div>*/}
             </div>
             
         

@@ -19,15 +19,16 @@ const LoginPage = () => {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            
             sessionStorage.setItem('authenticated', true);
+            navigate('/Bienvenue');
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             console.log(errorCode, errorMessage)
         });
-        navigate('/Bienvenue');
+        
+        
   };
 
   return (

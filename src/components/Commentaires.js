@@ -79,7 +79,7 @@ const [guest,setGuest] = useState(Guest);
 
   function initDefaultText(guestData)
   {
-    if (guestData.commentaires =="")
+    if (((guestData.commentaires =="") || (typeof(guestData.commentaires)!="string")))
         {
             let texte = "Ajoutez un commentaire..."
             sessionStorage.setItem('commentaires', '');

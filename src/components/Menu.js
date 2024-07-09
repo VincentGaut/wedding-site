@@ -24,7 +24,7 @@ const Menu = ({Guest}) => {
 
     function initSelectedItem (guestdata)
     {
-        if (guestdata.menu == "")
+        if ((guestdata.menu == "") || (typeof(guestdata.menu)!="string"))
             {
                 sessionStorage.setItem('menu', "");
                 return 'Select an option'

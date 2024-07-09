@@ -3,7 +3,7 @@ import firebase from './config';
 import FirebaseHandler from './FirebaseHandler';
 
 import './../styles/Firebase.css';
-
+let collectionName = "guestList"//guest
 
 
 const FirebaseResult = ({Search,Data,resetSearch}) => { 
@@ -25,7 +25,7 @@ const FirebaseResult = ({Search,Data,resetSearch}) => {
   const [submittedOver, setSubmittedOver] = useState(false);
   
 
-  const ref = firebase.firestore().collection("guest");
+  const ref = firebase.firestore().collection(collectionName);
 
   //console.log(ref)
 
@@ -66,20 +66,32 @@ const FirebaseResult = ({Search,Data,resetSearch}) => {
           {
             if (Object.keys(guest[i]).length != 0)
               {
-                if ((((guest[i].prenom).localeCompare(Data.prenom, 'en', { sensitivity: 'base' }) )==0)&&
-                (((guest[i].nom).localeCompare(Data.nom, 'en', { sensitivity: 'base' }) )==0))
-                {
-                  setFound(true)
-                  setFoundguest(guest[i])
-                  setFoundguestId(guestId[i])
-                  sessionStorage.setItem('id', guestId[i]);
-                  //console.log("guest log " ,guest[i])
-                  
-                }
-                else
-                {
-                  setnoUser(true)
-                }
+                if ((typeof(guest[i].prenom)== "string") && (typeof(guest[i].nom)
+                  =="string"))
+                  {
+                    if ((Data.prenom).substr(-1)==" ")
+                      {
+                        Data.prenom = (Data.prenom.substring(0, (Data.prenom).length - 1));
+                      }
+                    if ((Data.nom).substr(-1)==" ")
+                      {
+                        Data.nom = (Data.nom.substring(0, (Data.nom).length - 1));
+                      }
+                    if ((((guest[i].prenom).localeCompare(Data.prenom, 'en', { sensitivity: 'base' }) )==0)&&
+                    (((guest[i].nom).localeCompare(Data.nom, 'en', { sensitivity: 'base' }) )==0))
+                    {
+                      setFound(true)
+                      setFoundguest(guest[i])
+                      setFoundguestId(guestId[i])
+                      sessionStorage.setItem('id', guestId[i]);
+                      //console.log("guest log " ,guest[i])
+                      
+                    }
+                    else
+                    {
+                      setnoUser(true)
+                    }
+                  }
               }
               else
                 {
