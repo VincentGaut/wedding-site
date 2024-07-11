@@ -2,6 +2,8 @@ import React, { useState,useEffect } from 'react';
 import firebase from './config';
 import './../styles/Commentaires.css'
 
+let collectionName = "guestList"//guest
+
 // Composant pour afficher un seul commentaire
 const Comment = ({ text }) => (
   <div className="comment">
@@ -16,7 +18,7 @@ const [guest,setGuest] = useState(Guest);
   const [comment, setComment] = useState('');   // État pour stocker le texte du formulaire
   const [submittedGuest,setsubmittedGuest] = useState(false)
 
-  const ref = firebase.firestore().collection("guest");
+  const ref = firebase.firestore().collection(collectionName);
 
 
   useEffect ( () => {
