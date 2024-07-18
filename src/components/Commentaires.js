@@ -1,8 +1,9 @@
 import React, { useState,useEffect } from 'react';
 import firebase from './config';
+import { collectionName } from './config';
 import './../styles/Commentaires.css'
 
-let collectionName = "guestList"//guest
+//let collectionName = "guestList"//guest
 
 // Composant pour afficher un seul commentaire
 const Comment = ({ text }) => (

@@ -27,7 +27,7 @@ const Menu = ({Guest}) => {
         if ((guestdata.menu == "") || (typeof(guestdata.menu)!="string"))
             {
                 sessionStorage.setItem('menu', "");
-                return 'Select an option'
+                return 'Selectionner un menu'
             }
         else
         {

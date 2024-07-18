@@ -1,9 +1,10 @@
 import React, { useState,useEffect } from 'react';
 import firebase from './config';
+import { collectionName } from './config';
 import FirebaseHandler from './FirebaseHandler';
 
 import './../styles/Firebase.css';
-let collectionName = "guestList"//guest
+//let collectionName = "guestList"//guest
 
 
 const FirebaseResult = ({Search,Data,resetSearch}) => { 

@@ -19,6 +19,7 @@ let app;
   }
   
 export const auth = getAuth(app);
+export let collectionName = "guestList";//guest
 
 export default firebase;
 
