@@ -41,11 +41,11 @@ const Information = () => {
         <div className='information-wrapper'>
             <div className='information-container'>
               <div className='information-text'>
-                <h2> Se rendre à la Gentilhomiere : </h2>
+                <h2> Se rendre à la Gentilhommiere : </h2>
                 <p> Plus d'informations concernant le programme seront publiées plus tard</p>
                 <ul className='list-info'>
                   <li><b>En voiture :</b> se rendre à l'adresse 2 Rue de l'Église, 59269 Artres </li>
-                  <li><b>En train : </b> Le domaine de la Gentilhomiere se trouve à coté de Valenciennes,
+                  <li><b>En train : </b> Le domaine de la Gentilhommiere se trouve à coté de Valenciennes,
                     qui est accessible en train depuis Lille
                   </li>
                 </ul>

@@ -39,17 +39,19 @@ const Organisation = () => {
       {
         return (
             <section id="organisation">
-            <div className='orga-form-wrapper'>
-                <form className="organisation-form" onSubmit={handleFormSubmit}>
-                <label>Enter the password:
-                    <input
-                    type="text" 
-                    value={password}
-                    onChange={handleChange}
-                    />
-                </label>
-                <button className ="commentaire-button" type="submit">Enregistrer les informations</button>
-                </form>
+              <div className='container-form'>
+                <div className='orga-form-wrapper'>
+                    <form className="organisation-form" onSubmit={handleFormSubmit}>
+                    <label>Entrer le mot de passe:
+                        <input
+                        type="text" 
+                        value={password}
+                        onChange={handleChange}
+                        />
+                    </label>
+                    <button className ="commentaire-button" type="submit">Entrer</button>
+                    </form>
+                </div>
             </div>
             </section>
             );

@@ -1,9 +1,6 @@
 import React, { useState,useEffect,useRef } from 'react';
 import './../styles/Organisation_data.css';
-import { CategoryScale } from "chart.js";
-import { Pie  } from 'react-chartjs-2';
 
-import { Chart , Title, Tooltip, Legend, ArcElement } from 'chart.js';
 
 // Enregistre les composants ChartJS que tu utilises
 
@@ -89,28 +86,28 @@ const StatsGuest = ({data}) => {
           </thead>
           <tbody>
             <tr>
-            <th >{tableData.name}</th>
-            <th key={tableData.name}>{tableData.value}</th>
+              <th >{tableData.name}</th>
+              <th key={tableData.name}>{tableData.value}</th>
             </tr>
 
             <tr>
-            <th >present</th>
-            <th key = {present.name}>{present.value}</th>
+              <th >present</th>
+              <th key = {present.name}>{present.value}</th>
             </tr>
 
             <tr>
-            <th >Allergie</th>
-            <th key = {allergie.name}>{allergie.value}</th>
+              <th >Allergie</th>
+              <th key = {allergie.name}>{allergie.value}</th>
             </tr>
 
             <tr>
-            <th >Menu adulte</th>
-            <th key = {menu.name}>{menu.value}</th>
+              <th >Menu adulte</th>
+              <th key = {menu.name}>{menu.value}</th>
             </tr>
 
             <tr>
-            <th >Menu Vegetarien</th>
-            <th key = {vege.name}>{vege.value}</th>
+              <th >Menu Vegetarien</th>
+              <th key = {vege.name}>{vege.value}</th>
             </tr>
           </tbody>
         </table>
