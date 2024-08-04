@@ -13,7 +13,7 @@ const firebaseConfig = {
     measurementId: process.env.REACT_APP_FIREBASE_MEASURMENT_ID
   };
   
-let app;
+export let app;
   if (firebase.apps.length === 0) {
     app= firebase.initializeApp(firebaseConfig);
   }

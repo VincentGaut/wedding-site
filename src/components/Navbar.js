@@ -37,6 +37,7 @@ const Navbar = () => {
               <li><NavLink to="/Presence"  onClick={() => setIsOpen(false)}>Confirme ta presence</NavLink></li>
               <li><NavLink to="/infos"  onClick={() => setIsOpen(false)}>Informations</NavLink></li>
               <li><NavLink to="/galerie"  onClick={() => setIsOpen(false)}>Galerie</NavLink></li>
+              <li><NavLink to="/organisation"  onClick={() => setIsOpen(false)}>Organisation</NavLink></li>
             </ul>
           </nav>
         </div>

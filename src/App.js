@@ -11,6 +11,7 @@ import Gallery from './components/Gallery';
 import Schedule from './components/Schedule';
 import Presence from './components/Presence';
 import LoginPage from './components/Auth/LoginPage';
+import Organisation from './components/Organisation';
 
 const App = () => {
   return (
@@ -53,6 +54,7 @@ const AppContent  = () => {
           <Route path="/galerie" element={<Gallery></Gallery>}/>
           <Route path="/services" element={<Schedule></Schedule>} />
           <Route path="/infos" element={<Information></Information>} />
+          <Route path="/organisation" element={<Organisation></Organisation>} />
         </Routes>
       </div>
       {!noNavbarRoutes.includes(location.pathname) && <Footer></Footer>}

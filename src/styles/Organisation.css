@@ -1,0 +1,33 @@
+.array-orga {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans";
+    font-size: 25px;
+    font-weight: 400;
+    align-items: center;
+  }
+
+.array-orga li {
+color: #000;
+background-color: #fff;
+text-decoration: none;
+padding: 0.5rem 1rem;
+transition: background-color 0.3s;
+cursor: pointer;
+border-radius: 4px;
+
+}
+
+.array-orga li:hover {
+    background-color: #c2b3b3;
+    border-radius: 4px;
+  }
+
+  .orga-navbar {
+    background-color: #c2b3b3;
+    border-radius: 4px;
+    padding: 4px;
+  }
