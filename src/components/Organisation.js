@@ -16,7 +16,7 @@ const Organisation = () => {
         event.preventDefault(); // Empêche le rechargement de la page
         if (password.trim()) {   // Vérifie que le commentaire n'est pas vide
           
-            if (password == "pass")
+            if (password == process.env.REACT_APP_PASS_ORGA)
             {
                 //sessionStorage.setItem("orga",true);
                 setAuth(true);
@@ -62,9 +62,7 @@ const Organisation = () => {
                     <ul className='array-orga'>
                         <li  onClick={() => setNavigator(0)} >Liste </li>
                         <li  onClick={() => setNavigator(1)}> Stats</li>
-                        <li  onClick={() => setNavigator(2)}></li>
-                        <li  onClick={() => setNavigator(3)}></li>
-                        <li  onClick={() => setNavigator(4)}></li>
+
                     </ul>
                 </nav>
                 <Organisation_data navigator = {navigator}></Organisation_data>

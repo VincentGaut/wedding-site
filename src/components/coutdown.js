@@ -27,7 +27,7 @@ const CountdownLabel = styled.span`
 
 
 const WeddingCountdown = () => {
-    const weddingDate = new Date('2024-07-20');
+    const weddingDate = new Date('2025-05-03');
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   
     function calculateTimeLeft() {

@@ -1,50 +1,24 @@
 import React, { useState,useEffect,useRef } from 'react';
 import './../styles/Organisation_data.css';
-
+import { CategoryScale } from "chart.js";
 import { Pie  } from 'react-chartjs-2';
-import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement } from 'chart.js';
+
+import { Chart , Title, Tooltip, Legend, ArcElement } from 'chart.js';
 
 // Enregistre les composants ChartJS que tu utilises
-ChartJS.register(Title, Tooltip, Legend, ArcElement);
 
-const StatsGuest = () => {
-    const [data, setData] = useState(null);
+const StatsGuest = ({data}) => {
+    const [fields, setFields] = useState(data);
 
-  useEffect(() => {
-    // Simule un chargement de données
-    setTimeout(() => {
-      setData({
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
-        datasets: [
-          {
-            label: 'My Dataset',
-            data: [12, 19, 3, 5, 2],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-            ],
-            borderWidth: 1,
-          },
-        ],
-      });
-    }, 1000); // Délai pour simuler le chargement
-  }, []);
+    const [tableData,setTbaleData] = useState({
+        "name":"nombre d'invité",
+        "value" : data.length
+    })
 
-  useEffect ( () => {
-    console.log(data)
-    
-    
-  },[data])
+    const [present, setPresent] = useState({});
+    const [allergie, setAllergie] = useState({});
+    const [vege, setVege] = useState({});
+    const [menu, setmenu] = useState({});
 
   
     // Assure-toi que les échelles sont correctement configurées si elles sont utilisées
@@ -54,14 +28,92 @@ const StatsGuest = () => {
     // },
   
 
-  if (!data) {
+  
+  useEffect ( () => {
+    //console.log(documents.length)
+    let pres;
+    let totPres =0;
+    let totAlergie = 0;
+    let totVege = 0;
+    let totMenu = 0 ;
+    for (let i=0;i<fields.length;i++)
+    {
+      if (fields[i].presence === "present")
+      {
+        totPres = totPres+1;
+      }
+      if (fields[i].regime === "allergie")
+      {
+        totAlergie = totAlergie + 1;
+      }
+      if (fields[i].menu === "Adulte")
+      {
+        totMenu = totMenu + 1;
+      }
+      if (fields[i].menu === "vegetarien")
+      {
+        totVege = totVege + 1;
+      }
+    }
+    setPresent({
+      "name" : "nb present",
+      "value" : totPres})
+
+    setAllergie({
+      "name" : "nb allergie",
+      "value" : totAlergie
+    })
+
+    setmenu({
+      "name" : "Menu adulte",
+      "value" : totMenu
+    })
+
+    setVege({
+      "name" : "Menu vege",
+      "value" : totVege
+    })
+    
+  },[fields])
+
+  if (fields === null) {
     return <div>Chargement...</div>;
   }
   
     return (
       <div>
-        <h2>Graphique des Ventes</h2>
-        <Pie data={data}  />
+        
+        <table className='stat-table'>
+          <thead>
+            
+          </thead>
+          <tbody>
+            <tr>
+            <th >{tableData.name}</th>
+            <th key={tableData.name}>{tableData.value}</th>
+            </tr>
+
+            <tr>
+            <th >present</th>
+            <th key = {present.name}>{present.value}</th>
+            </tr>
+
+            <tr>
+            <th >Allergie</th>
+            <th key = {allergie.name}>{allergie.value}</th>
+            </tr>
+
+            <tr>
+            <th >Menu adulte</th>
+            <th key = {menu.name}>{menu.value}</th>
+            </tr>
+
+            <tr>
+            <th >Menu Vegetarien</th>
+            <th key = {vege.name}>{vege.value}</th>
+            </tr>
+          </tbody>
+        </table>
       </div>
     );
   };

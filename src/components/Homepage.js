@@ -3,6 +3,7 @@ import React from 'react';
 import MapComponent from './Lieux';
 import './../styles/Homepage.css';
 //import { Valse } from './image';
+import WeddingCountdown from './coutdown';
 
 const Homepage = () => (
   <div className='homepage-wrapper'>
@@ -25,7 +26,11 @@ const Homepage = () => (
           </div>
           <div className='save-the-date'>
               <h2> Save The Date !</h2>
-            </div>
+          </div>
+
+          <div className='countdown-div'>
+            <WeddingCountdown></WeddingCountdown>
+          </div>
 
             <div className='lieux-wrapper'>
               <div className='lieux-text-container'>

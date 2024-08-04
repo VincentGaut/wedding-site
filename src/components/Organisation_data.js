@@ -69,11 +69,15 @@ const Organisation_data = ({navigator}) => {
         
       },[documents])
 
+      if (fields.length === 0) {
+        return <div>Chargement...</div>;
+      }
+
     return (
         <div>
             {liste && <GuestListe data={fields}
                                     doc = {documents}></GuestListe>}
-            {stats && <StatsGuest
+            {stats && <StatsGuest data={documents}
                                     ></StatsGuest>}
         </div>
     );
