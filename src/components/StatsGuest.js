@@ -16,6 +16,14 @@ const StatsGuest = ({data}) => {
     const [allergie, setAllergie] = useState({});
     const [vege, setVege] = useState({});
     const [menu, setmenu] = useState({});
+    const [fairePart, setFairePart] = useState({});
+
+    const [amis, setAmis] = useState({});
+    const [famille, setFamille] = useState({});
+    const [amisEmeline, setAmisEmeline] = useState({});
+    const [amisVincent, setAmisVincent] = useState({});
+    const [familleEmeline, setFamilleEmeline] = useState({});
+    const [familleVincent, setFamilleVincent] = useState({});
 
   
     // Assure-toi que les échelles sont correctement configurées si elles sont utilisées
@@ -28,11 +36,21 @@ const StatsGuest = ({data}) => {
   
   useEffect ( () => {
     //console.log(documents.length)
-    let pres;
+    
     let totPres =0;
     let totAlergie = 0;
     let totVege = 0;
     let totMenu = 0 ;
+    let totFairePart = 0;
+
+    let totAmis = 0;
+    let totFamille = 0;
+    let totAmisEmeline = 0
+    let totAmisVincent = 0;
+    let totFamilleEmeline = 0;
+    let totFamilleVincent = 0;
+
+
     for (let i=0;i<fields.length;i++)
     {
       if (fields[i].presence === "present")
@@ -47,10 +65,39 @@ const StatsGuest = ({data}) => {
       {
         totMenu = totMenu + 1;
       }
-      if (fields[i].menu === "vegetarien")
+      if (fields[i].regime === "vegetarien")
       {
         totVege = totVege + 1;
       }
+      
+      if (fields[i].fairePart === "ok")
+      {
+        totFairePart = totFairePart + 1;
+      }
+
+      if (fields[i].lien === "amis emeline")
+      {
+        totAmisEmeline = totAmisEmeline + 1;
+      }
+
+      if (fields[i].lien === "amis vincent")
+      {
+        totAmisVincent = totAmisVincent + 1;
+      }
+
+      if (fields[i].lien === "famille emeline")
+      {
+        totFamilleEmeline = totFamilleEmeline + 1;
+      }
+      if (fields[i].lien === "famille vincent")
+      {
+        totFamilleVincent = totFamilleVincent + 1;
+      }
+
+      totFamille = totFamilleEmeline + totFamilleVincent;
+      totAmis = totAmisEmeline + totAmisVincent;
+
+      
     }
     setPresent({
       "name" : "nb present",
@@ -70,6 +117,42 @@ const StatsGuest = ({data}) => {
       "name" : "Menu vege",
       "value" : totVege
     })
+
+    setFairePart({
+      "name" : "Faire part donnés",
+      "value" : totFairePart
+    })
+
+    setAmis({
+      "name" : "Amis",
+      "value" : totAmis
+    })
+
+    setFamille({
+      "name" : "Amis",
+      "value" : totFamille
+    })
+
+    setFamilleEmeline({
+      "name" : "Amis",
+      "value" : totFamilleEmeline
+    })
+
+    setFamilleVincent({
+      "name" : "Amis",
+      "value" : totFamilleVincent
+    })
+
+    setAmisEmeline({
+      "name" : "Amis emeline",
+      "value" : totAmisEmeline
+    })
+
+    setAmisVincent({
+      "name" : "Amis Vincent",
+      "value" : totAmisVincent
+    })
+    
     
   },[fields])
 
@@ -108,6 +191,39 @@ const StatsGuest = ({data}) => {
             <tr>
               <th >Menu Vegetarien</th>
               <th key = {vege.name}>{vege.value}</th>
+            </tr>
+
+            <tr>
+              <th >Faire part donnés</th>
+              <th key = {fairePart.name}>{fairePart.value}</th>
+            </tr>
+
+            <tr>
+              <th >Amis</th>
+              <th key = {amis.name}>{amis.value}</th>
+            </tr>
+
+            <tr>
+              <th >famille</th>
+              <th key = {famille.name}>{famille.value}</th>
+            </tr>
+
+            <tr>
+              <th >famille emeline</th>
+              <th key = {familleEmeline.name}>{familleEmeline.value}</th>
+            </tr>
+            <tr>
+              <th >famille vincent</th>
+              <th key = {familleVincent.name}>{familleVincent.value}</th>
+            </tr>
+
+            <tr>
+              <th >amis vincent</th>
+              <th key = {amisVincent.name}>{amisVincent.value}</th>
+            </tr>
+            <tr>
+              <th >amis emeline</th>
+              <th key = {amisEmeline.name}>{amisEmeline.value}</th>
             </tr>
           </tbody>
         </table>

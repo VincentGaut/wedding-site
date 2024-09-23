@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from 'react';
+import { useTable } from 'react-table';
 import './../styles/GuestListe.css';
 
 
@@ -14,7 +15,7 @@ const GuestListe = ({data,doc}) => {
       useEffect ( () => {
         //sessionStorage.removeItem("orga");
         setDocuments(doc)
-        
+        console.log(doc)
       },[doc])
       
     return (
@@ -37,6 +38,7 @@ const GuestListe = ({data,doc}) => {
                         <td key={field}>
                         {doc[field] !== undefined ? JSON.stringify(doc[field]) : 'N/A'}
                         </td>
+                        
                     ))}
                     </tr>
                 ))}

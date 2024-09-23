@@ -2,7 +2,7 @@
 
 
 
-.table-container {
+/*.table-container {
     margin: 20px;
     padding: 20px;
     border-radius: 8px;
@@ -95,4 +95,63 @@
     align-items: center;
     flex-direction: row;
     justify-content: center;
+  }*/
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scroll for small screens */
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  /* Styles for larger screens (PC) */
+  @media (min-width: 768px) {
+    .data-table {
+      display: table;
+      overflow-x: auto; /* Enable horizontal scroll for small screens */
+    }
+  }
+  
+  /* Styles for smaller screens (smartphones) */
+  @media (max-width: 768px) {
+    .data-table {
+      overflow-x: auto; /* Enable horizontal scroll for small screens */
+      width: 100%;
+    }
+  
+    
+  
+    .data-table tr {
+      /*display: block;*/
+      margin-bottom: 15px; /* Add spacing between rows */
+      
+    }
+  
+    .data-table td {
+      /*display: block;*/
+      text-align: right;
+      
+      position: relative;
+    }
+  
+    /* Add labels for mobile view using pseudo-elements */
+    .data-table td::before {
+      content: attr(prenom); /* Utilise data-label pour afficher les titres de colonnes */
+      position: absolute;
+      left: 10px;
+      /*width: calc(50% - 10px);*/
+      text-align: left;
+      font-weight: bold;
+    }
+  
   }
