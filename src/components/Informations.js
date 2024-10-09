@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import Programme from './Programme';
 
 import './../styles/Information.css';
 
@@ -46,7 +47,7 @@ const Information = () => {
                 <ul className='list-info'>
                   <li><b>En voiture :</b> se rendre à l'adresse 2 Rue de l'Église, 59269 Artres </li>
                   <li><b>En train : </b> Le domaine de la Gentilhommiere se trouve à coté de Valenciennes,
-                    qui est accessible en train depuis Lille
+                    qui est accessible en train depuis Lille et Paris.
                   </li>
                 </ul>
 
@@ -54,6 +55,9 @@ const Information = () => {
                 <p> De nombreux hotels sont disponibles à Valenciennes mais aussi à Artres. Des 
                   chambres d'hôtes sont également disponibles.
                 </p>
+                
+                <Programme></Programme>
+
               </div>
             </div>
             <section id='contact'>
