@@ -50,9 +50,8 @@ const events = [
       maxWidth: "600px",
       marginBottom : "20px",
       position: "relative",
-      border: "3px solid #b9b7b7",
-    borderRadius: "10px",
-    backgroundColor: "##dddddd",
+      
+    
     display:"flex",
     flexdirection: "column",
     alignitems: "center"
@@ -98,7 +97,7 @@ const events = [
 const Programme = () => {
 
     return (
-    <div>
+    <div className='programme-container'>
         <div style={styles.timelineContainer}>
             <h2 style={styles.heading}>Programme</h2>
             <div style={styles.timeline}>
@@ -111,8 +110,9 @@ const Programme = () => {
                 />
                 ))}
             </div>
-            <div className='div-chat'></div>
+            
         </div>
+        <div className='div-chat'></div>
         
     </div>
     );
@@ -123,9 +123,7 @@ const timelineStyles = {
     padding: "20px",
     maxWidth: "600px",
     margin: "auto",
-    border: "1px solid #ddd",
-    borderRadius: "10px",
-    backgroundColor: "#f9f9f9",
+    
   },
   heading: {
     textAlign: "center",
