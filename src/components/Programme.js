@@ -44,18 +44,6 @@ const events = [
   };
 
   const styles = {
-    timelineContainer: {
-      padding: "20px",
-      fontFamily: "'Courier New', monospace",
-      maxWidth: "600px",
-      marginBottom : "20px",
-      position: "relative",
-      
-    
-    display:"flex",
-    flexdirection: "column",
-    alignitems: "center"
-    },
     heading: {
       textAlign: "center",
       marginBottom: "20px",
@@ -98,7 +86,7 @@ const Programme = () => {
 
     return (
     <div className='programme-container'>
-        <div style={styles.timelineContainer}>
+        <div className='timelineContainer'style={styles.timelineContainer}>
             <h2 style={styles.heading}>Programme</h2>
             <div style={styles.timeline}>
                 {events.map((event, index) => (

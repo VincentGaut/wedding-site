@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/wedding-site/static/css/main.9367a19e.css",
-    "main.js": "/wedding-site/static/js/main.45fa900e.js",
+    "main.css": "/wedding-site/static/css/main.46653eac.css",
+    "main.js": "/wedding-site/static/js/main.cdc73839.js",
     "static/js/453.d6f3f4a8.chunk.js": "/wedding-site/static/js/453.d6f3f4a8.chunk.js",
     "static/media/valse_contraste.JPG": "/wedding-site/static/media/valse_contraste.21d8f20c279dd3a869c6.JPG",
     "static/media/main_page.jpg": "/wedding-site/static/media/main_page.b9b460f6ce382a4a9732.jpg",
@@ -13,14 +13,15 @@
     "static/media/ring.png": "/wedding-site/static/media/ring.976b230e87796b902bc9.png",
     "static/media/marie.png": "/wedding-site/static/media/marie.11770c2302c74a6e4f63.png",
     "static/media/logo4.png": "/wedding-site/static/media/logo4.7eecc592bc77c1b85890.png",
+    "static/media/chat_calin_logo.png": "/wedding-site/static/media/chat_calin_logo.c82af79c98fe79fa46c8.png",
     "static/media/phone.png": "/wedding-site/static/media/phone.053d798169e40701153d.png",
     "index.html": "/wedding-site/index.html",
-    "main.9367a19e.css.map": "/wedding-site/static/css/main.9367a19e.css.map",
-    "main.45fa900e.js.map": "/wedding-site/static/js/main.45fa900e.js.map",
+    "main.46653eac.css.map": "/wedding-site/static/css/main.46653eac.css.map",
+    "main.cdc73839.js.map": "/wedding-site/static/js/main.cdc73839.js.map",
     "453.d6f3f4a8.chunk.js.map": "/wedding-site/static/js/453.d6f3f4a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9367a19e.css",
-    "static/js/main.45fa900e.js"
+    "static/css/main.46653eac.css",
+    "static/js/main.cdc73839.js"
   ]
 }

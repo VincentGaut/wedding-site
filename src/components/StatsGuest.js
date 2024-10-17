@@ -13,6 +13,8 @@ const StatsGuest = ({data}) => {
     })
 
     const [present, setPresent] = useState({});
+    const [absent, setAbsent] = useState({});
+    const [response, setResponse] = useState({});
     const [allergie, setAllergie] = useState({});
     const [vege, setVege] = useState({});
     const [menu, setmenu] = useState({});
@@ -38,6 +40,8 @@ const StatsGuest = ({data}) => {
     //console.log(documents.length)
     
     let totPres =0;
+    let totAbs =0;
+    let totResp =0;
     let totAlergie = 0;
     let totVege = 0;
     let totMenu = 0 ;
@@ -56,7 +60,11 @@ const StatsGuest = ({data}) => {
       if (fields[i].presence === "present")
       {
         totPres = totPres+1;
+      }else if (fields[i].presence === "absent")
+      {
+        totAbs = totAbs+1;
       }
+
       if (fields[i].regime === "allergie")
       {
         totAlergie = totAlergie + 1;
@@ -96,12 +104,19 @@ const StatsGuest = ({data}) => {
 
       totFamille = totFamilleEmeline + totFamilleVincent;
       totAmis = totAmisEmeline + totAmisVincent;
+      totResp = totPres + totAbs;
 
       
     }
     setPresent({
       "name" : "nb present",
       "value" : totPres})
+    setAbsent({
+      "name" : "nb absent",
+      "value" : totAbs})
+    setResponse({
+      "name" : "nb de réponse",
+      "value" : totResp})
 
     setAllergie({
       "name" : "nb allergie",
@@ -176,6 +191,14 @@ const StatsGuest = ({data}) => {
             <tr>
               <th >present</th>
               <th key = {present.name}>{present.value}</th>
+            </tr>
+            <tr>
+              <th >absent</th>
+              <th key = {absent.name}>{absent.value}</th>
+            </tr>
+            <tr>
+              <th >nbr réponse</th>
+              <th key = {response.name}>{response.value}</th>
             </tr>
 
             <tr>
