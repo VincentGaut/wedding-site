@@ -19,6 +19,8 @@ const StatsGuest = ({data}) => {
     const [vege, setVege] = useState({});
     const [menu, setmenu] = useState({});
     const [fairePart, setFairePart] = useState({});
+    const [invitVin, setInvitVin] = useState({});
+    const [invitrepas, setInvitrepas] = useState({});
 
     const [amis, setAmis] = useState({});
     const [famille, setFamille] = useState({});
@@ -46,6 +48,8 @@ const StatsGuest = ({data}) => {
     let totVege = 0;
     let totMenu = 0 ;
     let totFairePart = 0;
+    let totvin = 0;
+    let totrepas = 0;
 
     let totAmis = 0;
     let totFamille = 0;
@@ -100,6 +104,14 @@ const StatsGuest = ({data}) => {
       if (fields[i].lien === "famille vincent")
       {
         totFamilleVincent = totFamilleVincent + 1;
+      }
+      if (fields[i].invitation === "vin")
+      {
+        totvin = totvin + 1;
+      }
+      if (fields[i].invitation === "repas")
+      {
+        totrepas = totrepas + 1;
       }
 
       totFamille = totFamilleEmeline + totFamilleVincent;
@@ -166,6 +178,16 @@ const StatsGuest = ({data}) => {
     setAmisVincent({
       "name" : "Amis Vincent",
       "value" : totAmisVincent
+    })
+
+    setInvitVin({
+      "name" : "Nombre d'invitaion vin d'honneur",
+      "value" : totvin
+    })
+
+    setInvitrepas({
+      "name" : "Nombre d'invitaion repas",
+      "value" : totrepas
     })
     
     
@@ -247,6 +269,14 @@ const StatsGuest = ({data}) => {
             <tr>
               <th >amis emeline</th>
               <th key = {amisEmeline.name}>{amisEmeline.value}</th>
+            </tr>
+            <tr>
+              <th >vin d'honneur</th>
+              <th key = {invitVin.name}>{invitVin.value}</th>
+            </tr>
+            <tr>
+              <th >Repas</th>
+              <th key = {invitrepas.name}>{invitrepas.value}</th>
             </tr>
           </tbody>
         </table>
