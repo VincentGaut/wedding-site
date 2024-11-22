@@ -7,7 +7,7 @@ import './../styles/Programme.css';
 const events = [
     {
       time: "11h30-12h",
-      title: "Rdv à la mairie",
+      title: "Rdv à la mairie de Marcq en Baroeul",
       icon: "🏛️",
     },
     {
