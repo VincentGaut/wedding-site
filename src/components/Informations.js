@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import Programme from './Programme';
 
 import './../styles/Information.css';
 
@@ -43,7 +42,6 @@ const Information = () => {
             <div className='information-container'>
               <div className='information-text'>
                 <h2> Se rendre à la Gentilhommiere : </h2>
-                <p> Plus d'informations concernant le programme seront publiées plus tard</p>
                 <ul className='list-info'>
                   <li><b>En voiture :</b> se rendre à l'adresse 2 Rue de l'Église, 59269 Artres </li>
                   <li><b>En train : </b> Le domaine de la Gentilhommiere se trouve à coté de Valenciennes,
@@ -56,8 +54,6 @@ const Information = () => {
                   chambres d'hôtes sont également disponibles.
                 </p>
                 
-                <Programme></Programme>
-
               </div>
             </div>
             <section id='contact'>

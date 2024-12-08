@@ -4,6 +4,7 @@ import MapComponent from './Lieux';
 import './../styles/Homepage.css';
 //import { Valse } from './image';
 import WeddingCountdown from './coutdown';
+import Programme from './Programme';
 
 const Homepage = () => (
   <div className='homepage-wrapper'>
@@ -32,6 +33,10 @@ const Homepage = () => (
             <WeddingCountdown></WeddingCountdown>
           </div>
 
+          <div className='progamme-container'>
+            <Programme></Programme>
+          </div>
+
             <div className='lieux-wrapper'>
               <div className='lieux-text-container'>
                 <h3> Le Lieu</h3>
@@ -41,10 +46,6 @@ const Homepage = () => (
             </div>
           
 
-      </div>
-
-      <div className='map-wrapper'>
-        <MapComponent></MapComponent>
       </div>
       
 
