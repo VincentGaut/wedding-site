@@ -21,6 +21,10 @@ const StatsGuest = ({data}) => {
     const [fairePart, setFairePart] = useState({});
     const [invitVin, setInvitVin] = useState({});
     const [invitrepas, setInvitrepas] = useState({});
+    const [presRepas, setpresRepas] = useState({});
+    const [presvin, setpresvin] = useState({});
+    const [absrepas, setabsrepas] = useState({});
+    const [absvin, setabsvin] = useState({});
 
     const [amis, setAmis] = useState({});
     const [famille, setFamille] = useState({});
@@ -57,6 +61,9 @@ const StatsGuest = ({data}) => {
     let totAmisVincent = 0;
     let totFamilleEmeline = 0;
     let totFamilleVincent = 0;
+    let totpresRepas = 0;
+    let totabsRepas = 0;
+    let totabsVin = 0;
 
 
     for (let i=0;i<fields.length;i++)
@@ -113,11 +120,21 @@ const StatsGuest = ({data}) => {
       {
         totrepas = totrepas + 1;
       }
+      if ((fields[i].presence === "present") &&
+          (fields[i].invitation === "repas"))
+      {
+        totpresRepas = totpresRepas+1;
+      }
+      if ((fields[i].presence === "absent") &&
+          (fields[i].invitation === "repas"))
+      {
+        totabsRepas = totabsRepas+1;
+      }
 
       totFamille = totFamilleEmeline + totFamilleVincent;
       totAmis = totAmisEmeline + totAmisVincent;
       totResp = totPres + totAbs;
-
+      totabsVin = totAbs - totabsRepas;
       
     }
     setPresent({
@@ -188,6 +205,26 @@ const StatsGuest = ({data}) => {
     setInvitrepas({
       "name" : "Nombre d'invitaion repas",
       "value" : totrepas
+    })
+
+    setpresRepas({
+      "name" : "Présent au repas",
+      "value" : totpresRepas
+    })
+
+    setpresvin({
+      "name" : "Présent au vin d'honneur",
+      "value" : totPres - totpresRepas
+    })
+
+    setabsrepas({
+      "name" : "Absent au repas",
+      "value" : totabsRepas
+    })
+
+    setabsvin({
+      "name" : "Absent au vin d'honneur",
+      "value" : totabsVin
     })
     
     
@@ -277,6 +314,25 @@ const StatsGuest = ({data}) => {
             <tr>
               <th >Repas</th>
               <th key = {invitrepas.name}>{invitrepas.value}</th>
+            </tr>
+
+            <tr>
+              <th >Présent au repas</th>
+              <th key = {presRepas.name}>{presRepas.value}</th>
+            </tr>
+
+            <tr>
+              <th >Présent au vin d'honneur</th>
+              <th key = {presvin.name}>{presvin.value}</th>
+            </tr>
+
+            <tr>
+              <th >Absent au repas</th>
+              <th key = {absrepas.name}>{absrepas.value}</th>
+            </tr>
+            <tr>
+              <th >Absent au vin d'honneur</th>
+              <th key = {absvin.name}>{absvin.value}</th>
             </tr>
           </tbody>
         </table>
