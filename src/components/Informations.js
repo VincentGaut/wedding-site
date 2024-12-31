@@ -53,6 +53,12 @@ const Information = () => {
                 <p> De nombreux hotels sont disponibles à Valenciennes mais aussi à Artres. Des 
                   chambres d'hôtes sont également disponibles.
                 </p>
+                <ul className='liste-gite'>
+                  <li>Le gite de la pommeraie à 3km</li>
+                  <li>Le gite les pairies à 4km</li>
+                  <li>Le gite au champ du coq à 4km</li>
+                </ul>
+                <p> De nombreux autres logements sont aussi disponibles sur airbnb</p>
                 
               </div>
             </div>

@@ -138,3 +138,15 @@
     height: 30vh; /* La div enfant (background-image) occupe toute la hauteur de son parent */
     
   }
+
+  .liste-gite {
+    list-style-type: disc; /* Style des puces : disc, circle, square */
+    margin: 20px 0;
+    padding-left: 20px; /* Indentation */
+  }
+  
+  .liste-gite li {
+    font-size: 16px; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 8px; /* Espacement entre les éléments */
+  }
