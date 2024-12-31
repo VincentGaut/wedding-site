@@ -1,0 +1,93 @@
+.table-container{
+    display: flex;
+    gap: 20px; /* Espacement entre les tableaux */
+}
+
+.stat-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  .stat-table th,
+  .stat-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .stat-table th {
+    background-color: #f4f4f4;
+  }
+
+  .stat-table-wrapper {
+    flex: none; /* Empêche la mise à l'échelle des tableaux */
+    overflow-x: auto; /* Permet le défilement horizontal si le contenu dépasse */
+    max-width: 300px; /* Exemple de largeur maximale indépendante */
+  }
+
+  .stat-table caption {
+    caption-side: top; /* Le titre sera au-dessus du tableau */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espace entre le titre et le tableau */
+    text-align: center;
+  }
+
+  .stat-table-resp {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  .stat-table-resp th,
+  .stat-table-resp td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .stat-table-resp th {
+    background-color: #f4f4f4;
+  }
+
+  .stat-table-resp-wrapper {
+    flex: none; /* Empêche la mise à l'échelle des tableaux */
+    overflow-x: auto; /* Permet le défilement horizontal si le contenu dépasse */
+    max-width: 300px; /* Exemple de largeur maximale indépendante */
+  }
+  .stat-table-resp caption {
+    caption-side: top; /* Le titre sera au-dessus du tableau */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espace entre le titre et le tableau */
+    text-align: center;
+  }
+
+  .stat-table-menu {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  .stat-table-menu th,
+  .stat-table-menu td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .stat-table-menu th {
+    background-color: #f4f4f4;
+  }
+
+  .stat-table-menu-wrapper {
+    flex: none; /* Empêche la mise à l'échelle des tableaux */
+    overflow-x: auto; /* Permet le défilement horizontal si le contenu dépasse */
+    max-width: 300px; /* Exemple de largeur maximale indépendante */
+  }
+
+  .stat-table-menu caption {
+    caption-side: top; /* Le titre sera au-dessus du tableau */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espace entre le titre et le tableau */
+    text-align: center;
+  }

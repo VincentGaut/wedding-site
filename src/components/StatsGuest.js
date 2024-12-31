@@ -1,5 +1,5 @@
 import React, { useState,useEffect,useRef } from 'react';
-import './../styles/Organisation_data.css';
+import './../styles/StatsGuest.css';
 
 
 // Enregistre les composants ChartJS que tu utilises
@@ -14,10 +14,12 @@ const StatsGuest = ({data}) => {
 
     const [present, setPresent] = useState({});
     const [absent, setAbsent] = useState({});
+    const [attente, setAttente] = useState({});
     const [response, setResponse] = useState({});
     const [allergie, setAllergie] = useState({});
     const [vege, setVege] = useState({});
     const [menu, setmenu] = useState({});
+    const [menuEnfant, setmenuEnfant] = useState({});
     const [fairePart, setFairePart] = useState({});
     const [invitVin, setInvitVin] = useState({});
     const [invitrepas, setInvitrepas] = useState({});
@@ -64,6 +66,8 @@ const StatsGuest = ({data}) => {
     let totpresRepas = 0;
     let totabsRepas = 0;
     let totabsVin = 0;
+    let totAttente = 0;
+    let totMenuEnfant = 0;
 
 
     for (let i=0;i<fields.length;i++)
@@ -75,6 +79,10 @@ const StatsGuest = ({data}) => {
       {
         totAbs = totAbs+1;
       }
+      else if (fields[i].presence === "attente")
+      {
+        totAttente = totAttente+1;
+      }
 
       if (fields[i].regime === "allergie")
       {
@@ -83,6 +91,10 @@ const StatsGuest = ({data}) => {
       if (fields[i].menu === "Adulte")
       {
         totMenu = totMenu + 1;
+      }
+      else if (fields[i].menu === "Enfant")
+      {
+        totMenuEnfant = totMenuEnfant + 1;
       }
       if (fields[i].regime === "vegetarien")
       {
@@ -133,7 +145,7 @@ const StatsGuest = ({data}) => {
 
       totFamille = totFamilleEmeline + totFamilleVincent;
       totAmis = totAmisEmeline + totAmisVincent;
-      totResp = totPres + totAbs;
+      totResp = totPres + totAbs + totAttente;
       totabsVin = totAbs - totabsRepas;
       
     }
@@ -143,6 +155,9 @@ const StatsGuest = ({data}) => {
     setAbsent({
       "name" : "nb absent",
       "value" : totAbs})
+    setAttente({
+      "name" : "nb en attente",
+      "value" : totAttente})
     setResponse({
       "name" : "nb de réponse",
       "value" : totResp})
@@ -155,6 +170,11 @@ const StatsGuest = ({data}) => {
     setmenu({
       "name" : "Menu adulte",
       "value" : totMenu
+    })
+
+    setmenuEnfant({
+      "name" : "Menu enfant",
+      "value" : totMenuEnfant
     })
 
     setVege({
@@ -235,107 +255,137 @@ const StatsGuest = ({data}) => {
   }
   
     return (
-      <div>
-        
-        <table className='stat-table'>
-          <thead>
-            
-          </thead>
-          <tbody>
-            <tr>
-              <th >{tableData.name}</th>
-              <th key={tableData.name}>{tableData.value}</th>
-            </tr>
+      <div className='table-container'>
+        <div className='stat-table-wrapper'>
+          <table className='stat-table'>
+            <caption>Tableau invitation</caption>
+            <thead>
+              
+            </thead>
+            <tbody>
+              <tr>
+                <th >{tableData.name}</th>
+                <th key={tableData.name}>{tableData.value}</th>
+              </tr>
 
-            <tr>
-              <th >present</th>
-              <th key = {present.name}>{present.value}</th>
-            </tr>
-            <tr>
-              <th >absent</th>
-              <th key = {absent.name}>{absent.value}</th>
-            </tr>
-            <tr>
-              <th >nbr réponse</th>
-              <th key = {response.name}>{response.value}</th>
-            </tr>
+              <tr>
+                <th >Faire part donnés</th>
+                <th key = {fairePart.name}>{fairePart.value}</th>
+              </tr>
 
-            <tr>
-              <th >Allergie</th>
-              <th key = {allergie.name}>{allergie.value}</th>
-            </tr>
+              <tr>
+                <th >Amis</th>
+                <th key = {amis.name}>{amis.value}</th>
+              </tr>
 
-            <tr>
-              <th >Menu adulte</th>
-              <th key = {menu.name}>{menu.value}</th>
-            </tr>
+              <tr>
+                <th >famille</th>
+                <th key = {famille.name}>{famille.value}</th>
+              </tr>
 
-            <tr>
-              <th >Menu Vegetarien</th>
-              <th key = {vege.name}>{vege.value}</th>
-            </tr>
+              <tr>
+                <th >famille emeline</th>
+                <th key = {familleEmeline.name}>{familleEmeline.value}</th>
+              </tr>
+              <tr>
+                <th >famille vincent</th>
+                <th key = {familleVincent.name}>{familleVincent.value}</th>
+              </tr>
 
-            <tr>
-              <th >Faire part donnés</th>
-              <th key = {fairePart.name}>{fairePart.value}</th>
-            </tr>
+              <tr>
+                <th >amis vincent</th>
+                <th key = {amisVincent.name}>{amisVincent.value}</th>
+              </tr>
+              <tr>
+                <th >amis emeline</th>
+                <th key = {amisEmeline.name}>{amisEmeline.value}</th>
+              </tr>
+              <tr>
+                <th >Invités au vin d'honneur</th>
+                <th key = {invitVin.name}>{invitVin.value}</th>
+              </tr>
+              <tr>
+                <th >Invités au Repas</th>
+                <th key = {invitrepas.name}>{invitrepas.value}</th>
+              </tr>
 
-            <tr>
-              <th >Amis</th>
-              <th key = {amis.name}>{amis.value}</th>
-            </tr>
+              
+            </tbody>
+          </table>
+        </div>
 
-            <tr>
-              <th >famille</th>
-              <th key = {famille.name}>{famille.value}</th>
-            </tr>
-
-            <tr>
-              <th >famille emeline</th>
-              <th key = {familleEmeline.name}>{familleEmeline.value}</th>
-            </tr>
-            <tr>
-              <th >famille vincent</th>
-              <th key = {familleVincent.name}>{familleVincent.value}</th>
-            </tr>
-
-            <tr>
-              <th >amis vincent</th>
-              <th key = {amisVincent.name}>{amisVincent.value}</th>
-            </tr>
-            <tr>
-              <th >amis emeline</th>
-              <th key = {amisEmeline.name}>{amisEmeline.value}</th>
-            </tr>
-            <tr>
-              <th >vin d'honneur</th>
-              <th key = {invitVin.name}>{invitVin.value}</th>
-            </tr>
-            <tr>
-              <th >Repas</th>
-              <th key = {invitrepas.name}>{invitrepas.value}</th>
-            </tr>
-
-            <tr>
+        <div className='stat-table-resp-wrapper'>
+          <table className='stat-table-resp'>
+          <caption>Tableau des réponses</caption>
+            <thead>
+              
+            </thead>
+            <tbody>
+              <tr>
+                <th >present</th>
+                <th key = {present.name}>{present.value}</th>
+              </tr>
+              <tr>
+                <th >absent</th>
+                <th key = {absent.name}>{absent.value}</th>
+              </tr>
+              <tr>
+                <th >{attente.name}</th>
+                <th key = {attente.name}>{attente.value}</th>
+              </tr>
+              <tr>
+                <th >nbr réponse</th>
+                <th key = {response.name}>{response.value}</th>
+              </tr>
+              <tr>
               <th >Présent au repas</th>
               <th key = {presRepas.name}>{presRepas.value}</th>
-            </tr>
+              </tr>
 
-            <tr>
-              <th >Présent au vin d'honneur</th>
-              <th key = {presvin.name}>{presvin.value}</th>
-            </tr>
+              <tr>
+                <th >Présent au vin d'honneur</th>
+                <th key = {presvin.name}>{presvin.value}</th>
+              </tr>
 
-            <tr>
-              <th >Absent au repas</th>
-              <th key = {absrepas.name}>{absrepas.value}</th>
-            </tr>
-            <tr>
-              <th >Absent au vin d'honneur</th>
-              <th key = {absvin.name}>{absvin.value}</th>
-            </tr>
-          </tbody>
-        </table>
+              <tr>
+                <th >Absent au repas</th>
+                <th key = {absrepas.name}>{absrepas.value}</th>
+              </tr>
+              <tr>
+                <th >Absent au vin d'honneur</th>
+                <th key = {absvin.name}>{absvin.value}</th>
+              </tr>
+            </tbody>
+            </table>
+          </div>
+          <div className='stat-table-menu-wrapper'>
+          <table className='stat-table-menu'>
+          <caption>Tableau des menus</caption>
+            <thead>
+              
+            </thead>
+            <tbody>
+              <tr>
+                <th >Menu adulte</th>
+                <th key = {menu.name}>{menu.value}</th>
+              </tr>
+
+              <tr>
+                <th >Menu Enfant</th>
+                <th key = {menuEnfant.name}>{menuEnfant.value}</th>
+              </tr>
+
+              <tr>
+                <th >Menu Vegetarien</th>
+                <th key = {vege.name}>{vege.value}</th>
+              </tr>
+              <tr>
+                <th >Allergie</th>
+                <th key = {allergie.name}>{allergie.value}</th>
+              </tr>
+            </tbody>
+            </table>
+            </div>
       </div>
     );
   };
