@@ -15,7 +15,7 @@ const GuestListe = ({data,doc}) => {
       useEffect ( () => {
         //sessionStorage.removeItem("orga");
         setDocuments(doc)
-        console.log(doc)
+        //console.log(doc)
       },[doc])
       
     return (

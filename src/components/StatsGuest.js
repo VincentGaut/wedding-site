@@ -35,6 +35,12 @@ const StatsGuest = ({data}) => {
     const [familleEmeline, setFamilleEmeline] = useState({});
     const [familleVincent, setFamilleVincent] = useState({});
 
+
+    const [relance, setRelance] = useState({
+      name: "personne à relancer",
+      value: [] // Initialisation avec un tableau vide
+    });
+
   
     // Assure-toi que les échelles sont correctement configurées si elles sont utilisées
     // scales: {
@@ -68,6 +74,8 @@ const StatsGuest = ({data}) => {
     let totabsVin = 0;
     let totAttente = 0;
     let totMenuEnfant = 0;
+
+    let relancedata = [];
 
 
     for (let i=0;i<fields.length;i++)
@@ -143,12 +151,21 @@ const StatsGuest = ({data}) => {
         totabsRepas = totabsRepas+1;
       }
 
+      if (((typeof fields[i].presence === 'number') || (fields[i].presence === '')) ||
+        (((typeof fields[i].menu === 'number') || (fields[i].menu === "")) && 
+        ((fields[i].invitation === "repas") && (fields[i].presence === 'present'))))
+      {
+        relancedata.push({"prenom" : fields[i].prenom,
+                          "nom" : fields[i].nom
+        })
+      }
+
       totFamille = totFamilleEmeline + totFamilleVincent;
       totAmis = totAmisEmeline + totAmisVincent;
       totResp = totPres + totAbs + totAttente;
       totabsVin = totAbs - totabsRepas;
-      
     }
+
     setPresent({
       "name" : "nb present",
       "value" : totPres})
@@ -245,6 +262,11 @@ const StatsGuest = ({data}) => {
     setabsvin({
       "name" : "Absent au vin d'honneur",
       "value" : totabsVin
+    })
+
+    setRelance({
+      "name": "personne à relancer",
+      "value" : relancedata
     })
     
     
@@ -358,6 +380,8 @@ const StatsGuest = ({data}) => {
             </tbody>
             </table>
           </div>
+
+
           <div className='stat-table-menu-wrapper'>
           <table className='stat-table-menu'>
           <caption>Tableau des menus</caption>
@@ -383,6 +407,27 @@ const StatsGuest = ({data}) => {
                 <th >Allergie</th>
                 <th key = {allergie.name}>{allergie.value}</th>
               </tr>
+            </tbody>
+            </table>
+            </div>
+
+            <div className='stat-table-relance-wrapper'>
+          <table className='stat-table-relance'>
+          <caption>Tableau des relances</caption>
+            <thead>
+              
+            </thead>
+            <tbody>
+            {(relance.value && Array.isArray(relance.value)) ? (
+              relance.value.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.nom}</td>
+                  <td>{item.prenom}</td>
+                </tr>
+              ))
+            ) : (
+              <tr><td colSpan="2">Aucune donnée disponible</td></tr>
+            )}
             </tbody>
             </table>
             </div>
