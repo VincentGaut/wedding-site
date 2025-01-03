@@ -6,6 +6,7 @@ import { collectionName } from './config';
 
 import GuestListe from './GuestListe';
 import StatsGuest from './StatsGuest';
+import PlanTable from './Plan-Table';
 
 
 const Organisation_data = ({navigator}) => {
@@ -16,6 +17,7 @@ const Organisation_data = ({navigator}) => {
   const [fields, setFields] = useState([]);
   const [liste, setListe] = useState(true);
   const [stats, setStats] = useState(false);
+  const [plan, setplan] = useState(false);
   const [guestNB, setGuestNB] = useState(0);
 
     useEffect(() => {
@@ -44,20 +46,27 @@ const Organisation_data = ({navigator}) => {
     useEffect ( () => {
         //sessionStorage.removeItem("orga");
         setNavigator(navigator);
-        
         switch (navigator)
         {
             case 0:
                 setListe(true)
                 setStats(false)
+                setplan(false)
             break;
             case 1:
                 setListe(false)
                 setStats(true)
+                setplan(false)
+            break;
+            case 2:
+              setListe(false)
+              setStats(false)
+              setplan(true)
             break;
             default:
                 setListe(true)
                 setStats(false)
+                setplan(false)
             break;
         }
         
@@ -79,6 +88,7 @@ const Organisation_data = ({navigator}) => {
                                     doc = {documents}></GuestListe>}
             {stats && <StatsGuest data={documents}
                                     ></StatsGuest>}
+            {plan && <PlanTable ></PlanTable>}
         </div>
     );
        

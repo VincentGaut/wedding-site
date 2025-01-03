@@ -64,6 +64,7 @@ const Organisation = () => {
                     <ul className='array-orga'>
                         <li  onClick={() => setNavigator(0)} >Liste </li>
                         <li  onClick={() => setNavigator(1)}> Stats</li>
+                        <li  onClick={() => setNavigator(2)}> Plan de table</li>
 
                     </ul>
                 </nav>
