@@ -54,6 +54,29 @@ function PlanTable() {
       setDragging(false);
     };
   
+    const handleTouchStart = (event) => {
+      const touch = event.touches[0]; // Obtenir le premier point de contact
+      setDragging(true);
+      setDragStart({ x: touch.clientX, y: touch.clientY });
+    };
+  
+    const handleTouchMove = (event) => {
+      if (dragging) {
+        const touch = event.touches[0]; // Obtenir la position actuelle du toucher
+        const deltaX = touch.clientX - dragStart.x;
+        const deltaY = touch.clientY - dragStart.y;
+        setPosition((prev) => ({
+          x: prev.x + deltaX,
+          y: prev.y + deltaY,
+        }));
+        setDragStart({ x: touch.clientX, y: touch.clientY });
+      }
+    };
+  
+    const handleTouchEnd = () => {
+      setDragging(false);
+    };
+  
     const handleWheel = (event) => {
       const zoomChange = event.deltaY > 0 ? -0.1 : 0.1;
       setScale((prevScale) => Math.min(Math.max(prevScale + zoomChange, 0.5), 3)); // Limiter le zoom entre 0.5x et 3x
@@ -72,8 +95,8 @@ function PlanTable() {
           />
         </div>
         <a
-          href={previewUrl} // Permet le téléchargement de l'image actuelle (par défaut ou téléchargée)
-          download={file ? file.name : "default-image.jpg"} // Nom du fichier téléchargé
+          href={previewUrl}
+          download={file ? file.name : "default-image.jpg"}
           className="file-download-link"
         >
           Télécharger l'image
@@ -95,6 +118,9 @@ function PlanTable() {
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp} // Arrêter le déplacement si la souris quitte la zone
             onWheel={handleWheel} // Gestion du zoom avec la molette
+            onTouchStart={handleTouchStart} // Début du déplacement tactile
+            onTouchMove={handleTouchMove} // Déplacement tactile
+            onTouchEnd={handleTouchEnd} // Fin du déplacement tactile
           >
             <img
               src={previewUrl}
