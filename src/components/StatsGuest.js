@@ -448,7 +448,7 @@ const StatsGuest = ({data}) => {
 
         <div className='stat-table-attente-wrapper'>
           <table className='stat-table-attente'>
-          <caption>Tableau des attentes</caption>
+          <caption>Tableau en attentes</caption>
             <thead>
               
             </thead>

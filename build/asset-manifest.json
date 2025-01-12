@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/wedding-site/static/css/main.cec7814b.css",
-    "main.js": "/wedding-site/static/js/main.40551383.js",
+    "main.css": "/wedding-site/static/css/main.df285961.css",
+    "main.js": "/wedding-site/static/js/main.e2e193e1.js",
     "static/js/453.d6f3f4a8.chunk.js": "/wedding-site/static/js/453.d6f3f4a8.chunk.js",
     "static/media/valse_contraste.JPG": "/wedding-site/static/media/valse_contraste.21d8f20c279dd3a869c6.JPG",
     "static/media/main_page.jpg": "/wedding-site/static/media/main_page.b9b460f6ce382a4a9732.jpg",
@@ -9,7 +9,7 @@
     "static/media/hotel-la-gentilhommiere-facade-artres-475609.jpg": "/wedding-site/static/media/hotel-la-gentilhommiere-facade-artres-475609.6053837de97444f214a2.jpg",
     "static/media/chat_couche.jpg": "/wedding-site/static/media/chat_couche.76ec88c65b64d2dbdbb9.jpg",
     "static/media/couronne2.png": "/wedding-site/static/media/couronne2.413ad782ab34ce7e47bc.png",
-    "static/media/planTable.jpg": "/wedding-site/static/media/planTable.1bd2569876a1a258e580.jpg",
+    "static/media/planTable.jpg": "/wedding-site/static/media/planTable.12917096f6199de00d64.jpg",
     "static/media/rose.jpg": "/wedding-site/static/media/rose.6900cdb4791648afb879.jpg",
     "static/media/ring.png": "/wedding-site/static/media/ring.976b230e87796b902bc9.png",
     "static/media/marie.png": "/wedding-site/static/media/marie.11770c2302c74a6e4f63.png",
@@ -17,12 +17,12 @@
     "static/media/chat_calin_logo.png": "/wedding-site/static/media/chat_calin_logo.c82af79c98fe79fa46c8.png",
     "static/media/phone.png": "/wedding-site/static/media/phone.053d798169e40701153d.png",
     "index.html": "/wedding-site/index.html",
-    "main.cec7814b.css.map": "/wedding-site/static/css/main.cec7814b.css.map",
-    "main.40551383.js.map": "/wedding-site/static/js/main.40551383.js.map",
+    "main.df285961.css.map": "/wedding-site/static/css/main.df285961.css.map",
+    "main.e2e193e1.js.map": "/wedding-site/static/js/main.e2e193e1.js.map",
     "453.d6f3f4a8.chunk.js.map": "/wedding-site/static/js/453.d6f3f4a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cec7814b.css",
-    "static/js/main.40551383.js"
+    "static/css/main.df285961.css",
+    "static/js/main.e2e193e1.js"
   ]
 }
