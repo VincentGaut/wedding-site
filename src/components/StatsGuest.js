@@ -41,6 +41,11 @@ const StatsGuest = ({data}) => {
       value: [] // Initialisation avec un tableau vide
     });
 
+    const [attenteTab, setAttenteTab] = useState({
+      name: "personne en attente",
+      value: [] // Initialisation avec un tableau vide
+    });
+
   
     // Assure-toi que les échelles sont correctement configurées si elles sont utilisées
     // scales: {
@@ -76,6 +81,7 @@ const StatsGuest = ({data}) => {
     let totMenuEnfant = 0;
 
     let relancedata = [];
+    let enAttenteTabData = [];
 
 
     for (let i=0;i<fields.length;i++)
@@ -90,6 +96,9 @@ const StatsGuest = ({data}) => {
       else if (fields[i].presence === "attente")
       {
         totAttente = totAttente+1;
+        enAttenteTabData.push(({"prenom" : fields[i].prenom,
+          "nom" : fields[i].nom
+        }))
       }
 
       if (fields[i].regime === "allergie")
@@ -268,6 +277,11 @@ const StatsGuest = ({data}) => {
       "name": "personne à relancer",
       "value" : relancedata
     })
+
+    setAttenteTab({
+      "name": "personne en Attente",
+      "value" : enAttenteTabData
+    })
     
     
   },[fields])
@@ -409,9 +423,9 @@ const StatsGuest = ({data}) => {
               </tr>
             </tbody>
             </table>
-            </div>
+          </div>
 
-            <div className='stat-table-relance-wrapper'>
+        <div className='stat-table-relance-wrapper'>
           <table className='stat-table-relance'>
           <caption>Tableau des relances</caption>
             <thead>
@@ -430,8 +444,34 @@ const StatsGuest = ({data}) => {
             )}
             </tbody>
             </table>
-            </div>
-      </div>
+        </div>
+
+        <div className='stat-table-attente-wrapper'>
+          <table className='stat-table-attente'>
+          <caption>Tableau des attentes</caption>
+            <thead>
+              
+            </thead>
+            <tbody>
+            {(attenteTab.value && Array.isArray(attenteTab.value)) ? (
+              attenteTab.value.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.nom}</td>
+                  <td>{item.prenom}</td>
+                </tr>
+              ))
+            ) : (
+              <tr><td colSpan="2">Aucune donnée disponible</td></tr>
+            )}
+            </tbody>
+            </table>
+        </div>
+
+    </div>
+
+        
+
+        
     );
   };
   

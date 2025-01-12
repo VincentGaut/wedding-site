@@ -121,3 +121,33 @@
     margin-bottom: 10px; /* Espace entre le titre et le tableau */
     text-align: center;
   }
+
+  .stat-table-attente {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  .stat-table-attente th,
+  .stat-table-attente td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .stat-table-attente th {
+    background-color: #f4f4f4;
+  }
+
+  .stat-table-attente-wrapper {
+    flex: none; /* Empêche la mise à l'échelle des tableaux */
+    overflow-x: auto; /* Permet le défilement horizontal si le contenu dépasse */
+    max-width: 300px; /* Exemple de largeur maximale indépendante */
+  }
+
+  .stat-table-attente caption {
+    caption-side: top; /* Le titre sera au-dessus du tableau */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espace entre le titre et le tableau */
+    text-align: center;
+  }
