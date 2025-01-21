@@ -41,11 +41,23 @@ const Information = () => {
         <div className='information-wrapper'>
             <div className='information-container'>
               <div className='information-text'>
+                <h2> Se rendre à la Mairie de Marcq en Baroeul : </h2>
+
+                  <ul className='list-info'>
+                    <li><b>En transport en commun : </b> 
+                      Depuis le centre de Lille il faut prendre le tramway direction Tourcoing centre ou 
+                      Roubaix eurotéléport. Au centre de Lille il faut prendre le tramway soit à la gare Lille 
+                      Flandres soit à la gare Lille Europe. 
+                      Il faut ensuite descendre à l'arret <b>Croisé Laroche</b> (environ 10 min de tram) 
+                      et marcher 15 min jusqu'a la gare en remontant L'avenue Foch.
+                    </li>
+                  </ul>
+
                 <h2> Se rendre à la Gentilhommiere : </h2>
                 <ul className='list-info'>
                   <li><b>En voiture :</b> se rendre à l'adresse 2 Rue de l'Église, 59269 Artres </li>
                   <li><b>En train : </b> Le domaine de la Gentilhommiere se trouve à coté de Valenciennes,
-                    qui est accessible en train depuis Lille et Paris.
+                    qui est accessible en train depuis Lille et Paris. 
                   </li>
                 </ul>
 
@@ -57,6 +69,7 @@ const Information = () => {
                   <li>Le gite de la pommeraie à 3km</li>
                   <li>Le gite les pairies à 4km</li>
                   <li>Le gite au champ du coq à 4km</li>
+                  <li>L'Hotel Le moulin d'Artres à 500 m (il faut appeler et préciser que vous venez pour le mariage)</li>
                 </ul>
                 <p> De nombreux autres logements sont aussi disponibles sur airbnb</p>
                 
