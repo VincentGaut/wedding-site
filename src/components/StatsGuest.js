@@ -35,6 +35,11 @@ const StatsGuest = ({data}) => {
     const [familleEmeline, setFamilleEmeline] = useState({});
     const [familleVincent, setFamilleVincent] = useState({});
 
+    const [amisEmelinePres, setAmisEmelinePres] = useState({});
+    const [amisVincentPres, setAmisVincentPres] = useState({});
+    const [familleEmelinePres, setFamilleEmelinePres] = useState({});
+    const [familleVincentPres, setFamilleVincentPres] = useState({});
+
 
     const [relance, setRelance] = useState({
       name: "personne à relancer",
@@ -70,10 +75,18 @@ const StatsGuest = ({data}) => {
 
     let totAmis = 0;
     let totFamille = 0;
+
+
     let totAmisEmeline = 0
     let totAmisVincent = 0;
     let totFamilleEmeline = 0;
     let totFamilleVincent = 0;
+
+    let totAmisEmelinePres = 0
+    let totAmisVincentPres = 0;
+    let totFamilleEmelinePres = 0;
+    let totFamilleVincentPres = 0;
+
     let totpresRepas = 0;
     let totabsRepas = 0;
     let totabsVin = 0;
@@ -105,15 +118,15 @@ const StatsGuest = ({data}) => {
       {
         totAlergie = totAlergie + 1;
       }
-      if (fields[i].menu === "Adulte")
+      if ((fields[i].menu === "Adulte") && (fields[i].presence === "present"))
       {
         totMenu = totMenu + 1;
       }
-      else if (fields[i].menu === "Enfant")
+      else if ((fields[i].menu === "Enfant") && (fields[i].presence === "present"))
       {
         totMenuEnfant = totMenuEnfant + 1;
       }
-      if (fields[i].regime === "vegetarien")
+      if ((fields[i].regime === "vegetarien") && (fields[i].presence === "present") )
       {
         totVege = totVege + 1;
       }
@@ -141,6 +154,26 @@ const StatsGuest = ({data}) => {
       {
         totFamilleVincent = totFamilleVincent + 1;
       }
+
+      if ((fields[i].lien === "amis emeline") && (fields[i].presence === "present"))
+      {
+        totAmisEmelinePres = totAmisEmelinePres + 1;
+      }
+
+      if ((fields[i].lien === "amis vincent") && (fields[i].presence === "present"))
+      {
+        totAmisVincentPres = totAmisVincentPres + 1;
+      }
+
+      if ((fields[i].lien === "famille emeline") && (fields[i].presence === "present"))
+      {
+        totFamilleEmelinePres = totFamilleEmelinePres + 1;
+      }
+      if ((fields[i].lien === "famille vincent") && (fields[i].presence === "present"))
+      {
+        totFamilleVincentPres = totFamilleVincentPres + 1;
+      }
+
       if (fields[i].invitation === "vin")
       {
         totvin = totvin + 1;
@@ -241,6 +274,26 @@ const StatsGuest = ({data}) => {
     setAmisVincent({
       "name" : "Amis Vincent",
       "value" : totAmisVincent
+    })
+
+    setFamilleEmelinePres({
+      "name" : "Famille Emeline pres",
+      "value" : totFamilleEmelinePres
+    })
+
+    setFamilleVincentPres({
+      "name" : "Famille vincent pres",
+      "value" : totFamilleVincentPres
+    })
+
+    setAmisEmelinePres({
+      "name" : "Amis emeline pres",
+      "value" : totAmisEmelinePres
+    })
+
+    setAmisVincentPres({
+      "name" : "Amis Vincent pres",
+      "value" : totAmisVincentPres
     })
 
     setInvitVin({
@@ -390,6 +443,23 @@ const StatsGuest = ({data}) => {
               <tr>
                 <th >Absent au vin d'honneur</th>
                 <th key = {absvin.name}>{absvin.value}</th>
+              </tr>
+              <tr>
+                <th >famille emeline present</th>
+                <th key = {familleEmelinePres.name}>{familleEmelinePres.value}</th>
+              </tr>
+              <tr>
+                <th >famille vincent present</th>
+                <th key = {familleVincentPres.name}>{familleVincentPres.value}</th>
+              </tr>
+
+              <tr>
+                <th >amis vincent present</th>
+                <th key = {amisVincentPres.name}>{amisVincentPres.value}</th>
+              </tr>
+              <tr>
+                <th >amis emeline present</th>
+                <th key = {amisEmelinePres.name}>{amisEmelinePres.value}</th>
               </tr>
             </tbody>
             </table>
