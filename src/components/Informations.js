@@ -73,6 +73,12 @@ const Information = () => {
                 </ul>
                 <p> De nombreux autres logements sont aussi disponibles sur airbnb</p>
                 
+                <h2> Réponses aux questions : </h2>
+
+                <ul className='liste-question'>
+                  <li> <strong> Liste de mariage : </strong> Nous n'avons pas de liste de mariage mais souhaitons faire une cagnotte le jour du mariage.</li>
+                  
+                </ul>
               </div>
             </div>
             <section id='contact'>
