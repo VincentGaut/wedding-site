@@ -36,7 +36,11 @@
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    opacity: 0.6;
+    opacity: 0.8;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (max-width: 768px) {
@@ -44,5 +48,25 @@
       width: 100%;
       background-position: 75% 75%;
     }
+  }
+
+  .qrCode{
+    height: 30vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url('./../components/img/qr_code_gallery.png');
+    
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-size: contain;
+  }
+
+  .text-qrCode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   

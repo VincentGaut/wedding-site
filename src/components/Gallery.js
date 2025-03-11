@@ -15,7 +15,11 @@ const Gallery = () => (
 
     <div className='cat'>
         <div className='text-wrap'>
-        <h1> Pas encore disponible ! Wait and see</h1>
+            <div className='qrCode'></div>
+            <div className='text-qrCode'>
+              <p><strong>Accéder à l'album : </strong></p>
+            <p>Ouvrez WedShoots sur votre téléphone portable, ajoutez votre prénom et introduisez le code de l'album ou scannez le QR code.</p>
+            <p>Code de l'album :<strong>FRa87ccc60</strong></p></div>
         </div>
 
     </div>
