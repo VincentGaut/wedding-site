@@ -40,6 +40,8 @@ const StatsGuest = ({data}) => {
     const [familleEmelinePres, setFamilleEmelinePres] = useState({});
     const [familleVincentPres, setFamilleVincentPres] = useState({});
 
+    const [rebond, setrebond] = useState({});
+
 
     const [relance, setRelance] = useState({
       name: "personne à relancer",
@@ -95,6 +97,8 @@ const StatsGuest = ({data}) => {
 
     let relancedata = [];
     let enAttenteTabData = [];
+
+    let presenceRebond = 0;
 
 
     for (let i=0;i<fields.length;i++)
@@ -192,6 +196,11 @@ const StatsGuest = ({data}) => {
       {
         totabsRepas = totabsRepas+1;
       }
+
+      if (fields[i].rebond === "present")
+        {
+          presenceRebond = presenceRebond + 1;
+        }
 
       if (((typeof fields[i].presence === 'number') || (fields[i].presence === '')) ||
         (((typeof fields[i].menu === 'number') || (fields[i].menu === "")) && 
@@ -335,6 +344,11 @@ const StatsGuest = ({data}) => {
       "name": "personne en Attente",
       "value" : enAttenteTabData
     })
+
+    setrebond({
+      "name": "Brunch present",
+      "value" : presenceRebond
+    })
     
     
   },[fields])
@@ -460,6 +474,10 @@ const StatsGuest = ({data}) => {
               <tr>
                 <th >amis emeline present</th>
                 <th key = {amisEmelinePres.name}>{amisEmelinePres.value}</th>
+              </tr>
+              <tr>
+                <th >Present brunch</th>
+                <th key = {rebond.name}>{rebond.value}</th>
               </tr>
             </tbody>
             </table>

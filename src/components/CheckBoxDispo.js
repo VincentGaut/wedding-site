@@ -172,12 +172,12 @@ const CheckBoxDispo = ({Guest}) => {
                      <Menu Guest={guest}></Menu>
                 </div>}
 
-                {/* invitation &&<div className='rebond-wrapper'>
+                {<div className='rebond-wrapper'>
                  
                   <h2> Rebond : </h2>
                     <Rebond Guest={guest}></Rebond>
                   
-                </div>*/}
+                </div>}
             </div>
             
         
