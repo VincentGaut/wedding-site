@@ -6,8 +6,8 @@ import './../styles/Programme.css';
 
 const events = [
     {
-      time: "11h30-12h",
-      title: "Rdv à la mairie de Marcq en Baroeul",
+      time: "11h00-12h",
+      title: "Rdv à la mairie de Marcq en Baroeul, début de la cérémonie 11h30",
       icon: "🏛️",
     },
     {
