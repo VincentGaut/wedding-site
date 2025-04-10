@@ -76,7 +76,7 @@ const Information = () => {
                 <h2> Réponses aux questions : </h2>
 
                 <ul className='liste-question'>
-                  <li> <strong> Liste de mariage : </strong> Nous n'avons pas de liste de mariage mais souhaitons faire une cagnotte le jour du mariage.</li>
+                  <li> <strong> Liste de mariage : </strong> Nous n'avons pas de liste de mariage mais souhaitons faire une cagnotte. Il y a plusieurs possibilité soit dans l'urne le jour du mariage soit avec notre cagnotte leetchie : <a href= 'https://www.leetchi.com/fr/c/mariage-emeline-et-vincent-2267882?utm_source=copylink&utm_medium=social_sharing'> lien cagnotte </a></li>
                   
                 </ul>
               </div>
